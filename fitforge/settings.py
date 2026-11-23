@@ -38,7 +38,7 @@ FITFORGE_STEP_TARGETS = {
 FITFORGE_WEEKLY_ACTIVITY_TARGET_MINUTES = 150
 if not DEBUG and SECRET_KEY == "dev-only-change-this-before-deployment":
     raise ImproperlyConfigured("Set DJANGO_SECRET_KEY to a strong random value in production.")
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
