@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ exercise.name }}{% endblock %}
+{% block content %}
+<section class="exercise-detail">
+  <a class="back-link" href="{% url 'exercises' %}">← Back to exercise library</a>
+  <div class="exercise-detail-grid">
+    <div class="exercise-detail-media">
+      {% if exercise.video_url and exercise.video_embeddable %}<video class="exercise-video-player" controls autoplay muted loop playsinline preload="metadata" aria-label="{{ exercise.name }} video demonstration" {% if exercise.image_url %}poster="{{ exercise.image_url }}"{% endif %}><source src="{{ exercise.video_url }}" type="{{ exercise.video_mime_type }}">Your browser does not support this exercise video format.</video>{% elif exercise.image_url %}<img src="{{ exercise.image_url }}" alt="{{ exercise.name }} exercise demonstration">{% elif exercise.video_url %}<div class="exercise-video-tile detail-video-tile"><span class="video-play">▶</span><span>VIDEO FORMAT NOT SUPPORTED</span></div>{% else %}<div class="exercise-video-tile detail-video-tile"><span>DEMONSTRATION UNAVAILABLE</span></div>{% endif %}
+    </div>
+    <div class="exercise-detail-copy">
+      <p class="eyebrow">{{ exercise.category|default:"EXERCISE GUIDE" }}</p>
+      <h1>{{ exercise.name }}<span class="green-dot">.</span></h1>
+      <div class="exercise-detail-tags">{% if exercise.muscles %}<div><small>TARGET MUSCLES</small><strong>{{ exercise.muscles }}</strong></div>{% endif %}{% if exercise.equipment %}<div><small>EQUIPMENT</small><strong>{{ exercise.equipment }}</strong></div>{% endif %}</div>
+      {% if exercise.video_url and exercise.video_embeddable %}<p class="video-playback-note">Video starts muted. Use the player controls to pause, replay, or turn the sound on.</p>{% elif exercise.video_url %}<p class="video-playback-note">This clip’s format or codec is not supported for in-page playback in this browser. No download is started; use the image and instructions below.</p>{% endif %}
+    </div>
+  </div>
+  <section class="exercise-instructions panel"><div class="panel-heading"><div><p class="eyebrow">MOVE WELL</p><h2>How to do it</h2></div><span class="instruction-label">WGER GUIDE</span></div>{% if exercise.description %}<div class="instruction-copy">{{ exercise.description }}</div>{% else %}<p class="subtle-text">Written instructions are not available for this exercise. Use the demonstration above and ask a qualified trainer if you are unsure about technique.</p>{% endif %}</section>
+  <div class="exercise-source"><span>Exercise data and demonstrations from wger.</span>{% if exercise.license_name %}<span>{{ exercise.license_name }}{% if exercise.license_url %} · <a href="{{ exercise.license_url }}" target="_blank" rel="noopener noreferrer">License details ↗</a>{% endif %}</span>{% endif %}</div>
+  <p class="subtle-text exercise-safety">Use a controlled range of motion and choose a load appropriate to your experience. Stop if you feel pain.</p>
+</section>
+{% endblock %}

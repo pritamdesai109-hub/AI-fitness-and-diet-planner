@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block title %}Create your account{% endblock %}
+{% block content %}
+<section class="auth-wrap"><div class="auth-aside"><p class="eyebrow"><span class="live-dot"></span> START WHERE YOU ARE</p><h1>Your pace.<br>Your progress<span class="green-dot">.</span></h1><p>Create your account, then set the fitness details used to personalize your daily plan.</p></div><div class="auth-card"><p class="eyebrow">AI FITNESS &amp; DIET PLANNER</p><h2>Create your account</h2><form method="post" class="form-stack">{% csrf_token %}{{ form.as_p }}<button class="button full-width" type="submit">Continue to fitness setup <span aria-hidden="true">→</span></button></form><p class="form-foot">Already have an account? <a href="{% url 'login' %}">Log in</a></p></div></section>
+{% endblock %}

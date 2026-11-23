@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Fitness profile{% endblock %}
+{% block content %}
+<section class="page-heading"><p class="eyebrow">LET'S MAKE IT PERSONAL</p><h1>Your fitness profile<span class="green-dot">.</span></h1><p>These details personalize your daily estimates, exercise suggestions, and meal plans.</p></section>
+<section class="content-grid"><div class="panel form-panel"><h2>Fitness and food preferences</h2><form method="post" class="form-stack">{% csrf_token %}{{ form.as_p }}<button class="button" type="submit">Save and continue <span aria-hidden="true">→</span></button></form></div><aside class="panel note-panel"><img class="feature-gif" src="{% static 'icon/bmi.png' %}" alt="" width="56" height="56" loading="lazy"><h3>A note on estimates</h3><p>BMI and activity estimates are broad indicators, not a diagnosis or a complete measure of health. Energy estimates use the Mifflin-St Jeor equation for adults and are not medical advice. Estimates are withheld for minors. If pregnant, breastfeeding, or managing a medical condition, consult a qualified professional rather than relying on automated calorie estimates.</p></aside></section>
+{% endblock %}

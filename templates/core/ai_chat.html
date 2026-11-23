@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}AI Fitness Assistant{% endblock %}
+{% block content %}
+<section class="page-heading ai-chat-heading">
+  <p class="eyebrow"><span class="live-dot"></span> YOUR PERSONAL FITNESS GUIDE</p>
+  <h1>Ask your AI assistant<span class="green-dot">.</span></h1>
+  <p>Get practical, supportive guidance for workouts, nutrition, and building healthy habits.</p>
+</section>
+
+<section class="panel ai-chat-panel" aria-label="AI fitness assistant conversation">
+  <div class="ai-chat-top">
+    <div class="ai-chat-identity">
+      <span class="ai-chat-avatar"><img src="{% static 'icon/ai.png' %}" alt=""></span>
+      <div><strong>FitGuide</strong><small>Fitness and nutrition assistant</small></div>
+    </div>
+    {% if chat_history %}
+    <form method="post">
+      {% csrf_token %}
+      <input type="hidden" name="action" value="clear">
+      <button class="button button-outline button-small" type="submit">New conversation</button>
+    </form>
+    {% endif %}
+  </div>
+
+  <div class="ai-chat-thread" aria-live="polite">
+    {% if not chat_history %}
+    <div class="ai-chat-welcome">
+      <h2>What would you like help with?</h2>
+      <p>Ask about exercise technique, meal ideas, recovery, or creating a routine that fits your day.</p>
+    </div>
+    {% endif %}
+    {% for item in chat_history %}
+    <article class="chat-message chat-message-{{ item.role }}">
+      <span class="chat-message-label">{% if item.role == "user" %}You{% else %}FitGuide{% endif %}</span>
+      <p>{{ item.text|linebreaksbr }}</p>
+    </article>
+    {% endfor %}
+  </div>
+
+  {% if error %}<div class="notice notice-error" role="alert">{{ error }}</div>{% endif %}
+  <form method="post" class="ai-chat-form">
+    {% csrf_token %}
+    <label class="sr-only" for="assistant-message">Your question</label>
+    <textarea id="assistant-message" name="message" rows="3" maxlength="1000" placeholder="Ask a question about fitness or nutrition..." required>{{ question }}</textarea>
+    <div class="ai-chat-submit-row">
+      <small>Keep questions general. This assistant is not a substitute for medical advice.</small>
+      <button class="button" type="submit">Send question <span aria-hidden="true">→</span></button>
+    </div>
+  </form>
+</section>
+{% endblock %}

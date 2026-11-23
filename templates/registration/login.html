@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block title %}Log in{% endblock %}
+{% block content %}
+<section class="auth-wrap"><div class="auth-aside"><p class="eyebrow"><span class="live-dot"></span> YOUR NEXT REP STARTS HERE</p><h1>Good to<br>see you<span class="green-dot">.</span></h1><p>Your goals are still here. Pick up where you left off.</p></div><div class="auth-card"><p class="eyebrow">WELCOME BACK</p><h2>Log in to AI Fitness &amp; Diet Planner</h2><form method="post" class="form-stack">{% csrf_token %}{{ form.as_p }}{% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}<button class="button full-width" type="submit">Log in <span aria-hidden="true">→</span></button></form><p class="form-foot">New here? <a href="{% url 'register' %}">Create an account</a></p></div></section>
+{% endblock %}

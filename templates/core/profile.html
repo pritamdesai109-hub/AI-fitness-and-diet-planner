@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Profile settings{% endblock %}
+{% block content %}
+<section class="page-heading">
+    <p class="eyebrow">YOUR DETAILS, YOUR CHOICE</p>
+    <h1>Profile settings<span class="green-dot">.</span></h1>
+    <p>Update your fitness details and preferences. Your account is private.</p>
+</section>
+<section class="content-grid">
+    <div class="panel form-panel">
+        <p class="eyebrow">FITNESS PROFILE</p>
+        <h2>{{ user.first_name|default:user.email }}</h2>
+        <form method="post" class="form-stack">{% csrf_token %}{{ form.as_p }}<button class="button" type="submit">Save
+                changes <span aria-hidden="true">→</span></button></form>
+    </div>
+    <aside class="panel note-panel"><img class="feature-gif" src="{% static 'icon/profile.png' %}" alt="" width="56"
+            height="42" loading="lazy">
+        <h3>Account security</h3>
+        <p><strong>Email:</strong> {{ user.email|default:"Not provided" }}</p>
+    </aside>
+</section>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Progress{% endblock %}
+{% block content %}
+<section class="page-heading progress-page-heading">
+  <p class="eyebrow">YOUR JOURNEY, YOUR DATA</p>
+  <h1>Progress<span class="green-dot">.</span></h1>
+  <p>Review recorded changes over time. Missing entries stay blank instead of being treated as zero.</p>
+</section>
+
+<form method="get" class="progress-period-filter">
+  <label for="progress-period">Date range</label>
+  <select name="period" id="progress-period">{% for option in period_options %}<option value="{{ option.value }}"{% if option.selected %} selected{% endif %}>{{ option.label }}</option>{% endfor %}</select>
+  <button class="button button-small" type="submit">Update charts</button>
+</form>
+
+<section class="saved-plans-section progress-plans-section" id="saved-plans" aria-labelledby="saved-plans-title">
+  <div class="section-title-row"><div><p class="eyebrow">AI PLANS · YOUR HISTORY</p><h2 id="saved-plans-title">Saved plan history</h2></div><div class="dashboard-actions"><a class="button button-small" href="{% url 'ai_workout' %}">New workout</a><a class="button button-outline button-small" href="{% url 'ai_meal_plan' %}">New meal plan</a></div></div>
+  {% if saved_plans %}
+    <div class="saved-plan-grid progress-saved-plan-grid">
+      {% for plan in saved_plans %}
+      <article class="saved-plan-card progress-saved-plan-card {% if plan.plan_type == 'workout' %}saved-plan-workout{% else %}saved-plan-meal{% endif %}">
+        <div class="saved-plan-card-head"><span class="saved-plan-icon"><img src="{% if plan.plan_type == 'workout' %}{% static 'icon/target.png' %}{% else %}{% static 'icon/plan.png' %}{% endif %}" alt="" width="34" height="34" loading="lazy"></span><span class="saved-plan-date">{{ plan.date|date:"M j, Y" }}</span></div>
+        <p class="eyebrow">{% if plan.plan_type == "workout" %}WORKOUT · {{ plan.completed_count }}/{{ plan.item_count }} COMPLETE{% else %}MEAL PLAN · {{ plan.completed_count }}/{{ plan.item_count }} FOLLOWED{% endif %}</p>
+        <h3>{% if plan.plan_type == "workout" %}{{ plan.payload.level|title }} workout{% else %}Your daily menu{% endif %}</h3>
+        {% if plan.plan_type == "workout" %}
+          <div class="follow-plan-list">
+            {% for item in plan.display_items %}
+            <div class="follow-plan-row {% if item.completed %}is-complete{% endif %}">
+              <span class="follow-plan-number">{{ forloop.counter|stringformat:"02d" }}</span>
+              <div class="follow-plan-copy"><strong>{{ item.guide_name }}</strong><small>{{ item.sets }} sets · {% if item.reps %}{{ item.reps }} reps{% else %}{{ item.duration_seconds }} sec{% endif %} · {{ item.rest_seconds }} sec rest</small></div>
+              <form method="post" action="{% url 'toggle_saved_plan_item' plan.pk item.index %}">{% csrf_token %}<input type="hidden" name="next" value="progress"><button class="plan-step-toggle {% if item.completed %}is-done{% endif %}" type="submit" aria-label="{% if item.completed %}Mark {{ item.guide_name }} not done{% else %}Mark {{ item.guide_name }} done{% endif %}">{% if item.completed %}✓{% else %}Done{% endif %}</button></form>
+            </div>
+            {% endfor %}
+          </div>
+          {% if plan.payload.advice %}<p class="subtle-text saved-plan-note">{{ plan.payload.advice }}</p>{% endif %}
+        {% else %}
+          <div class="follow-plan-list">
+            {% for item in plan.display_items %}<div class="follow-plan-row {% if item.completed %}is-complete{% endif %}"><span class="meal-type-pill">{{ item.meal_type|title }}</span><div class="follow-plan-copy"><strong>{% if item.food %}{{ item.food.name }}{% else %}Food no longer available{% endif %}</strong><small>{{ item.grams|floatformat:0 }} g · {{ item.reason }} · {% if item.completed %}Eaten{% else %}Not marked eaten{% endif %}</small></div></div>{% endfor %}
+          </div>
+          {% if plan.is_added_to_tracker %}<a class="button button-outline button-small full-width" href="{% url 'nutrition_log' %}?date={{ plan.date|date:'Y-m-d' }}">Follow this plan in meal tracker <span aria-hidden="true">→</span></a>{% else %}<a class="button button-small full-width" href="{% url 'ai_meal_plan' %}?plan={{ plan.pk }}">Review &amp; add to meal tracker <span aria-hidden="true">→</span></a>{% endif %}
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% if plan_history_page.has_other_pages %}<nav class="pagination plan-history-pagination" aria-label="Saved plan history pages">{% if plan_history_page.has_previous %}<a href="?period={{ period }}&amp;plans_page={{ plan_history_page.previous_page_number }}#saved-plans">← Newer plans</a>{% else %}<span></span>{% endif %}<span>Page {{ plan_history_page.number }} of {{ plan_history_page.paginator.num_pages }}</span>{% if plan_history_page.has_next %}<a href="?period={{ period }}&amp;plans_page={{ plan_history_page.next_page_number }}#saved-plans">Older plans →</a>{% else %}<span></span>{% endif %}</nav>{% endif %}
+  {% else %}
+    <div class="saved-plan-empty panel"><span class="feature-icon" aria-hidden="true">✳</span><div><h3>Your AI plans will be kept here</h3><p>Generate a meal plan or workout and return to follow it here whenever you need.</p></div><div class="empty-actions"><a class="button button-small" href="{% url 'ai_workout' %}">Plan a workout</a><a class="text-link" href="{% url 'ai_meal_plan' %}">Plan meals →</a></div></div>
+  {% endif %}
+</section>
+
+<section class="progress-stat-grid" aria-label="Progress statistics">
+  <article class="stat-card stat-highlight"><div class="stat-top"><span>CURRENT RECORDED WEIGHT</span><span class="stat-icon"><img src="{% static 'icon/bmi.png' %}" alt="" width="36" height="36" loading="lazy"></span></div><strong>{% if latest_weigh_in %}{{ latest_weigh_in.weight_kg|floatformat:1 }} kg{% else %}—{% endif %}</strong><small>{% if latest_weigh_in %}On {{ latest_weigh_in.date|date:"M j, Y" }}{% else %}Add an actual weigh-in to begin{% endif %}</small></article>
+  <article class="stat-card"><div class="stat-top"><span>TARGET WEIGHT</span><span class="stat-icon"><img src="{% static 'icon/target.png' %}" alt="" width="36" height="36" loading="lazy"></span></div><strong>{% if profile.target_weight_kg %}{{ profile.target_weight_kg|floatformat:1 }} kg{% else %}—{% endif %}</strong><small>Set your target weight in profile settings</small></article>
+  <article class="stat-card"><div class="stat-top"><span>WEIGHT CHANGE</span><span class="stat-icon"><img src="{% static 'icon/graph.png' %}" alt="" width="36" height="36" loading="lazy"></span></div><strong>{% if weight_change != None %}{{ weight_change|floatformat:1 }} kg{% else %}—{% endif %}</strong><small>Latest minus first recorded weigh-in</small></article>
+  <article class="stat-card"><div class="stat-top"><span>AVERAGE CALORIES</span><span class="stat-icon"><img src="{% static 'icon/fire.png' %}" alt="" width="36" height="36" loading="lazy"></span></div><strong>{% if average_calories != None %}{{ average_calories|floatformat:1 }} kcal{% else %}—{% endif %}</strong><small>Per day with consumed meals recorded in this range</small></article>
+  <article class="stat-card"><div class="stat-top"><span>AVERAGE PROTEIN</span><span class="stat-icon"><img src="{% static 'icon/energy.png' %}" alt="" width="36" height="36" loading="lazy"></span></div><strong>{% if average_protein != None %}{{ average_protein|floatformat:0 }} g{% else %}—{% endif %}</strong><small>Per day with consumed meals recorded in this range</small></article>
+  <article class="stat-card"><div class="stat-top"><span>GOAL PROGRESS</span><span class="stat-icon"><img src="{% static 'icon/walk.png' %}" alt="" width="36" height="36" loading="lazy"></span></div><strong>{% if goal_progress != None %}{{ goal_progress }}%{% else %}—{% endif %}</strong><small>Based on recorded starting/current weight and target</small></article>
+</section>
+
+<section class="progress-chart-grid">
+  <article class="panel progress-chart-panel">
+    <div class="panel-heading"><div><p class="eyebrow">NUTRITION</p><h2>Calories: target vs consumed</h2></div></div>
+    {% if calorie_chart %}
+      {% include "core/partials/line_chart.html" with chart=calorie_chart chart_label="Estimated daily calorie target compared with consumed food records" %}
+      {% if nutrition_days_logged == 0 %}<p class="subtle-text">No consumed meal records in this range; any visible line is your current target only.</p>{% endif %}
+    {% else %}
+      <div class="empty-state"><p>No consumed food entries are recorded for this range.</p><a href="{% url 'profile' %}">Complete your adult fitness profile →</a></div>
+    {% endif %}
+  </article>
+
+  <article class="panel progress-chart-panel">
+    <div class="panel-heading"><div><p class="eyebrow">NUTRITION</p><h2>Protein: target vs consumed</h2></div></div>
+    {% if protein_chart %}
+      {% include "core/partials/line_chart.html" with chart=protein_chart chart_label="Estimated daily protein target compared with consumed food records" %}
+      {% if nutrition_days_logged == 0 %}<p class="subtle-text">No consumed meal records in this range; any visible line is your current target only.</p>{% endif %}
+    {% else %}
+      <div class="empty-state"><p>No consumed food entries are recorded for this range.</p><a href="{% url 'profile' %}">Complete your adult fitness profile →</a></div>
+    {% endif %}
+  </article>
+</section>
+<p class="source-note progress-data-note">{{ chart_frequency_note }} {{ target_history_note }} Current calorie and protein targets use profile data and are estimates, not medical advice.</p>
+
+<section class="content-grid progress-entry-grid">
+  <div class="panel form-panel" id="record-form">
+    <p class="eyebrow">DAILY CHECK-IN</p><h2>Record progress and activity</h2>
+    <form method="post" class="form-stack">
+      {% csrf_token %}<input type="hidden" name="period" value="{{ period }}">
+      {{ form.as_p }}
+      <button class="button" type="submit">Save check-in <span aria-hidden="true">→</span></button>
+    </form>
+  </div>
+  <section class="panel">
+    <div class="panel-heading"><div><p class="eyebrow">YOUR LOG</p><h2>Recent records</h2></div></div>
+    {% if recent_records %}
+    <div class="table-wrap"><table><thead><tr><th>Date</th><th>Weight</th><th>Steps</th><th>Activity</th><th>Water</th><th>Notes</th><th></th></tr></thead><tbody>
+      {% for record in recent_records %}<tr><td>{{ record.date|date:"M j, Y" }}</td><td>{% if record.weight_kg != None %}{{ record.weight_kg }} kg{% else %}—{% endif %}</td><td>{% if record.steps != None %}{{ record.steps|floatformat:0 }}{% else %}—{% endif %}</td><td>{% if record.activity_minutes != None %}{{ record.activity_minutes }} min{% else %}—{% endif %}</td><td>{% if record.water_ml != None %}{{ record.water_ml }} ml{% else %}—{% endif %}</td><td>{{ record.notes|default:"—" }}</td><td><a class="text-link" href="?period={{ period }}&amp;record_date={{ record.date|date:'Y-m-d' }}#record-form">Edit</a></td></tr>{% endfor %}
+    </tbody></table></div>
+    {% else %}<div class="empty-state"><p>No check-ins yet.</p><span>Only information you record will appear here.</span></div>{% endif %}
+  </section>
+</section>
+{% endblock %}

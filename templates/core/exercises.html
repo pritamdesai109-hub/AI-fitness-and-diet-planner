@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Exercise library{% endblock %}
+{% block content %}
+<section class="exercise-intro">
+  <div>
+    <p class="eyebrow"><span class="live-dot"></span> TRAIN WITH CONFIDENCE</p>
+    <h1>Find your next<br>movement<span class="green-dot">.</span></h1>
+    <p>Browse English exercise guides with real demonstrations. Every result has an image or browser-compatible video, with instructions on its detail page.</p>
+  </div>
+  <div class="exercise-intro-stat"><strong>{{ page_obj.paginator.count }}</strong><span>GUIDES WITH MEDIA</span><small>Exercise data from wger</small></div>
+</section>
+<section class="panel dashboard-section"><div class="panel-heading"><div><p class="eyebrow">PERSONAL WORKOUT BUILDER</p><h2>Plan today with AI</h2></div><a class="button button-small" href="{% url 'ai_workout' %}">Build my workout →</a></div><p class="subtle-text">Choose beginner or advanced. Every suggestion comes from an exercise guide in this library.</p></section>
+<form class="exercise-filters" method="get">
+  <div class="exercise-search-box">
+    <img class="search-field-icon" src="{% static 'icon/search.png' %}" alt="" width="20" height="20">
+    <input id="exercise-search" name="q" value="{{ query }}" placeholder="Search movement, muscle, or equipment...">
+  </div>
+  <div class="exercise-category-box">
+    <select id="exercise-category" name="category" aria-label="Muscle group">
+      <option value="">All muscle groups</option>
+      {% for item in categories %}
+        <option value="{{ item }}" {% if category == item %}selected{% endif %}>{{ item }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <button class="button button-small exercise-search-btn" type="submit">Find exercises <span aria-hidden="true">→</span></button>
+</form>
+{% if error %}<div class="notice notice-error">{{ error }}</div>{% endif %}
+{% if exercises %}
+<div class="exercise-grid">
+  {% for exercise in exercises %}
+  <article class="exercise-card">
+    <a class="exercise-card-link" href="{% url 'exercise_detail' exercise.id %}">
+      {% if exercise.image_url %}<img class="exercise-card-image" src="{{ exercise.image_url }}" alt="{{ exercise.name }} demonstration" loading="lazy">{% else %}<div class="exercise-video-tile"><img src="{% static 'icon/target.png' %}" alt="" width="64" height="64" loading="lazy"><span class="video-play">▶</span><span>VIDEO GUIDE</span></div>{% endif %}
+      <div class="exercise-content"><p class="eyebrow"><img class="exercise-category-gif" src="{% static 'icon/energy.png' %}" alt="" width="20" height="20" loading="lazy">{{ exercise.category|default:"MOVEMENT" }}</p><h2>{{ exercise.name }}</h2><div class="tag-row">{% if exercise.muscles %}<span>{{ exercise.muscles }}</span>{% endif %}{% if exercise.equipment %}<span>{{ exercise.equipment }}</span>{% endif %}</div><span class="exercise-view-link">View technique <span aria-hidden="true">↗</span></span></div>
+    </a>
+  </article>
+  {% endfor %}
+</div>
+{% if page_obj.paginator.num_pages > 1 %}<nav class="pagination" aria-label="Exercise pages">{% if page_obj.has_previous %}<a href="?q={{ query|urlencode }}&category={{ category|urlencode }}&page={{ page_obj.previous_page_number }}">← Previous</a>{% endif %}<span>PAGE {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>{% if page_obj.has_next %}<a href="?q={{ query|urlencode }}&category={{ category|urlencode }}&page={{ page_obj.next_page_number }}">Next →</a>{% endif %}</nav>{% endif %}
+<p class="source-note">Exercise data and media provided by <a href="https://wger.de/" rel="noopener noreferrer" target="_blank">wger</a>. Only exercises with an available image or browser-compatible video are listed.</p>
+{% elif not error %}<div class="empty-state large-empty"><span class="empty-icon">⌕</span><h2>No matching exercise guides</h2><p>Try a different movement, equipment, or muscle group.</p><a href="{% url 'exercises' %}">Clear filters →</a></div>{% endif %}
+{% endblock %}

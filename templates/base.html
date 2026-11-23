@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5ee">
+  <meta name="description" content="AI Fitness & Diet Planner helps you plan workouts, meals, and steady fitness progress.">
+  <title>{% block title %}AI Fitness &amp; Diet Planner{% endblock %} · AI Fitness &amp; Diet Planner</title>
+  <link rel="stylesheet" href="{% static 'core/site.css' %}?v=7">
+  <link rel="stylesheet" href="{% static 'core/redesign.css' %}?v=4">
+  <script defer src="{% static 'core/theme.js' %}?v=2"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header app-header">
+      <a class="brand" href="{% if user.is_authenticated %}{% url 'dashboard' %}{% else %}{% url 'home' %}{% endif %}" aria-label="AI Fitness home">
+        <span class="brand-mark" aria-hidden="true"><img class="brand-logo-img" src="{% static 'main/Logo.png' %}" alt="" onerror="this.style.display='none';"><span>AF</span></span><span class="brand-name">AI Fitness <span>&amp;</span> Diet Planner</span>
+      </a>
+      {% if user.is_authenticated %}
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="{% if request.resolver_match.url_name == 'dashboard' %}nav-primary{% endif %}" href="{% url 'dashboard' %}"{% if request.resolver_match.url_name == 'dashboard' %} aria-current="page"{% endif %}><img class="nav-gif-icon" src="{% static 'icon/energy.png' %}" alt=""><span>Overview</span></a>
+          <a class="{% if request.resolver_match.url_name == 'exercises' or request.resolver_match.url_name == 'exercise_detail' or request.resolver_match.url_name == 'ai_workout' %}nav-primary{% endif %}" href="{% url 'exercises' %}"{% if request.resolver_match.url_name == 'exercises' or request.resolver_match.url_name == 'exercise_detail' or request.resolver_match.url_name == 'ai_workout' %} aria-current="page"{% endif %}><img class="nav-gif-icon" src="{% static 'icon/target.png' %}" alt=""><span>Exercises</span></a>
+          <a class="{% if request.resolver_match.url_name == 'nutrition' or request.resolver_match.url_name == 'nutrition_log' or request.resolver_match.url_name == 'food_detail' or request.resolver_match.url_name == 'ai_meal_plan' or request.resolver_match.url_name == 'foods' %}nav-primary{% endif %}" href="{% url 'nutrition' %}"{% if request.resolver_match.url_name == 'nutrition' or request.resolver_match.url_name == 'nutrition_log' or request.resolver_match.url_name == 'food_detail' or request.resolver_match.url_name == 'ai_meal_plan' or request.resolver_match.url_name == 'foods' %} aria-current="page"{% endif %}><img class="nav-gif-icon" src="{% static 'icon/plan.png' %}" alt=""><span>Nutrition</span></a>
+          <a class="{% if request.resolver_match.url_name == 'progress' %}nav-primary{% endif %}" href="{% url 'progress' %}"{% if request.resolver_match.url_name == 'progress' %} aria-current="page"{% endif %}><img class="nav-gif-icon" src="{% static 'icon/graph.png' %}" alt=""><span>Progress</span></a>
+        </nav>
+        <div class="header-tools">
+          <a class="header-plan-link" href="{% url 'ai_chat' %}"{% if request.resolver_match.url_name == 'ai_chat' %} aria-current="page"{% endif %}><img class="header-plan-icon" src="{% static 'icon/ai.png' %}" alt=""> <span>AI Bot</span></a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-toggle-label">Theme</span></button>
+          <a class="header-avatar" href="{% url 'profile' %}" aria-label="Profile settings">{{ user.first_name|default:user.email|default:user.username|first|upper }}</a>
+          <form class="header-logout" method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="logout-button" type="submit">Log out</button></form>
+        </div>
+      {% else %}
+        <nav class="main-nav public-nav" aria-label="Site navigation"><a href="{% url 'home' %}">Home</a><a href="{% url 'home' %}#features">How it works</a></nav>
+        <div class="header-tools header-cta" aria-label="Account navigation">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-toggle-label">Theme</span></button>
+          <a class="login-link" href="{% url 'login' %}">Log in</a>
+          <a class="button button-small" href="{% url 'register' %}">Get started <span aria-hidden="true">↗</span></a>
+        </div>
+      {% endif %}
+    </header>
+    <main id="main-content" tabindex="-1">
+      {% if messages %}<div class="message-stack" role="status" aria-live="polite">{% for message in messages %}<div class="message {{ message.tags }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="site-footer"><a class="footer-brand" href="{% url 'home' %}">AI Fitness &amp; Diet Planner</a><span>Small steps. Steady progress.</span><span>Health estimates are educational, not medical advice.</span></footer>
+  </div>
+</body>
+</html>

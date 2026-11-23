@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Meal tracker{% endblock %}
+{% block content %}
+<section class="page-heading page-heading-row"><div><p class="eyebrow">YOUR FOOD LOG</p><h1>Meal tracker<span class="green-dot">.</span></h1><p>Consumed meals count toward daily totals; planned foods stay separate until marked consumed.</p></div><div class="dashboard-actions"><a class="button button-small" href="{% url 'ai_meal_plan' %}">AI meal plan →</a><a class="button button-outline button-small" href="{% url 'nutrition' %}">Browse foods →</a></div></section>
+<section class="nutrition-today panel">
+  <form method="get" class="date-picker" action="{% url 'nutrition_log' %}"><label for="meal-date">Daily log</label><input id="meal-date" name="date" type="date" value="{{ selected_date }}"><button class="button button-small" type="submit">View day</button></form>
+  <div class="nutrition-totals"><div><strong>{{ totals.calories|floatformat:1 }}</strong><small>calories consumed</small></div><div><strong>{{ totals.protein_g|floatformat:1 }}<small> g</small></strong><small>protein</small></div><div><strong>{{ totals.carbs_g|floatformat:1 }}<small> g</small></strong><small>carbohydrates</small></div><div><strong>{{ totals.fat_g|floatformat:1 }}<small> g</small></strong><small>fat</small></div></div>
+  <div class="food-secondary-nutrients"><span>Fiber <strong>{{ totals.fiber_g|floatformat:1 }} g</strong></span><span>Sugar <strong>{{ totals.sugar_g|floatformat:1 }} g</strong></span><span>Sodium <strong>{{ totals.sodium_mg|floatformat:1 }} mg</strong></span></div>
+  <div class="meal-total-grid">{% for meal in meal_breakdown %}<div><span>{{ meal.label }}</span><strong>{{ meal.calories|floatformat:1 }} kcal</strong><small>{{ meal.protein_g|floatformat:1 }} g protein · {{ meal.carbs_g|floatformat:1 }} g carbs · {{ meal.fat_g|floatformat:1 }} g fat</small></div>{% endfor %}</div>
+  <p class="subtle-text">Food values come from the local starter dataset and are estimates. Planned entries are excluded from these totals.</p>
+</section>
+<div class="content-grid nutrition-grid">
+  <section class="panel">
+    <div class="panel-heading"><div><p class="eyebrow">CONSUMED</p><h2>Meals for {{ selected_date }}</h2></div></div>
+    {% if consumed_entries %}<div class="list-stack">{% for entry in consumed_entries %}<div class="list-row meal-row"><span class="list-icon" aria-hidden="true"><img src="{% static 'icon/plan.png' %}" alt="" width="30" height="30" loading="lazy"></span><span class="list-main"><strong>{{ entry.food_name }}</strong><small>{{ entry.get_meal_type_display }} · {{ entry.quantity }} · {{ entry.weight_in_grams|floatformat:1 }} g · {{ entry.calories|floatformat:1 }} kcal</small></span><form method="post" action="{% url 'toggle_meal' entry.id %}">{% csrf_token %}<button class="status-button is-done" type="submit">Move to plan</button></form><form method="post" action="{% url 'delete_meal' entry.id %}">{% csrf_token %}<button class="status-button status-danger" type="submit" aria-label="Delete {{ entry.food_name }} from consumed meals">Delete</button></form></div>{% endfor %}</div>{% else %}<div class="empty-state"><p>No consumed meals for this day yet.</p><a href="{% url 'nutrition' %}">Choose a food to add</a></div>{% endif %}
+  </section>
+  <section class="panel">
+    <div class="panel-heading"><div><p class="eyebrow">PLANNED · NOT COUNTED</p><h2>Planned meals</h2></div></div>
+    {% if planned_entries %}<div class="list-stack">{% for entry in planned_entries %}<div class="list-row meal-row"><span class="list-icon" aria-hidden="true"><img src="{% static 'icon/clock.png' %}" alt="" width="30" height="30" loading="lazy"></span><span class="list-main"><strong>{{ entry.food_name }}</strong><small>{{ entry.get_meal_type_display }} · {{ entry.quantity }} · {{ entry.weight_in_grams|floatformat:1 }} g · {{ entry.calories|floatformat:1 }} kcal</small></span><form method="post" action="{% url 'toggle_meal' entry.id %}">{% csrf_token %}<button class="status-button" type="submit">Mark consumed</button></form><form method="post" action="{% url 'delete_meal' entry.id %}">{% csrf_token %}<button class="status-button status-danger" type="submit" aria-label="Delete {{ entry.food_name }} from planned meals">Delete</button></form></div>{% endfor %}</div>{% else %}<div class="empty-state"><p>No meals planned for this day.</p><a href="{% url 'nutrition' %}">Plan a food</a></div>{% endif %}
+  </section>
+</div>
+{% endblock %}

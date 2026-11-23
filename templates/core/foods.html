@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Nutrition{% endblock %}
+{% block content %}
+<section class="page-heading page-heading-row"><div><p class="eyebrow">FOOD LIBRARY</p><h1>Nutrition<span class="green-dot">.</span></h1><p>Explore Indian foods and track your daily nutrition.</p></div><div class="dashboard-actions"><a class="button button-small" href="{% url 'ai_meal_plan' %}">Create AI meal plan →</a><a class="button button-outline button-small" href="{% url 'nutrition_log' %}">Meal tracker →</a></div></section>
+<form class="food-search-form" method="get" action="{% url 'nutrition' %}">
+  <label class="sr-only" for="food-search">Search Indian foods in English, Hindi, or Marathi</label>
+  <span class="search-icon" aria-hidden="true"><img src="{% static 'icon/search.png' %}" alt="" width="24" height="24"></span>
+  <input id="food-search" name="q" value="{{ query }}" placeholder="Search foods in English, Hindi, or Marathi">
+  <label class="sr-only" for="food-category">Food category</label>
+  <select id="food-category" name="category"><option value="">All foods</option>{% for value in categories %}<option value="{{ value }}"{% if category == value %} selected{% endif %}>{{ value }}</option>{% endfor %}</select>
+  <button class="button button-small" type="submit">Search</button>
+</form>
+<p class="food-result-count">{% if query %}{{ page_obj.paginator.count }} result{{ page_obj.paginator.count|pluralize }} for “{{ query }}”{% else %}{{ page_obj.paginator.count }} foods{% endif %}{% if category %} · {{ category }}{% endif %}</p>
+{% if foods %}
+  <div class="food-grid">{% for food in foods %}<a class="food-card-link" href="{% url 'food_detail' food.slug %}"><article class="panel food-card">
+    {% if food.image_url %}<img class="food-image" src="{{ food.image_url }}" alt="{{ food.name }}" loading="lazy">{% endif %}
+    <div class="food-card-heading"><div><span class="food-category"><img class="food-category-gif" src="{% static 'icon/plan.png' %}" alt="" width="20" height="20" loading="lazy">{{ food.category }}</span><h2>{{ food.name }}</h2><p>{{ food.food_state_label }}</p></div>{% if food.is_vegetarian %}<span class="diet-mark" aria-label="Vegetarian">VEG</span>{% endif %}</div>
+    <div class="food-macros"><span>Calories<strong>{{ food.calories_per_100g|floatformat:1 }} <small>kcal</small></strong></span><span>Protein<strong>{{ food.protein_per_100g|floatformat:1 }} <small>g</small></strong></span><span>Carbs<strong>{{ food.carbs_per_100g|floatformat:1 }} <small>g</small></strong></span><span>Fat<strong>{{ food.fat_per_100g|floatformat:1 }} <small>g</small></strong></span></div>
+    <div class="food-card-footer"><span>Per 100 g · estimate</span><strong>View details <span aria-hidden="true">→</span></strong></div>
+  </article></a>{% endfor %}</div>
+  {% if page_obj.has_other_pages %}<nav class="pagination" aria-label="Food library pages">{% if page_obj.has_previous %}<a href="?q={{ query|urlencode }}&category={{ category|urlencode }}&page={{ page_obj.previous_page_number }}">← Previous</a>{% else %}<span></span>{% endif %}<span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>{% if page_obj.has_next %}<a href="?q={{ query|urlencode }}&category={{ category|urlencode }}&page={{ page_obj.next_page_number }}">Next →</a>{% else %}<span></span>{% endif %}</nav>{% endif %}
+{% elif query %}<div class="empty-state large-empty"><span class="empty-icon">⌕</span><h2>No matching foods</h2><p>Try another English, Hindi, or Marathi name, or clear the category filter.</p><a href="{% url 'nutrition' %}">View all foods</a></div>
+{% else %}<div class="empty-state large-empty"><span class="empty-icon">◒</span><h2>Food database not loaded</h2><p>Import the local food dataset with <code>python manage.py import_foods</code>.</p></div>{% endif %}
+{% endblock %}

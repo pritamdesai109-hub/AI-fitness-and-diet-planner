@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}AI Workout Planner{% endblock %}
+{% block content %}
+<section class="page-heading"><p class="eyebrow">YOUR TRAINING, PERSONALIZED</p><h1>Today's workout<span class="green-dot">.</span></h1><p>Choose your experience level and get a session from this library. Recent plans help rotate exercises and prescriptions.</p></section>
+<section class="content-grid planner-layout">
+  <div class="panel form-panel">
+    <p class="eyebrow">WORKOUT BUILDER</p><h2>Choose your level</h2>
+    {% if fallback_note %}<div class="notice notice-fallback" role="status">{{ fallback_note }}</div>{% endif %}
+    {% if error %}<div class="notice notice-error" role="alert">{{ error }}</div>{% endif %}
+    <form method="post" class="form-stack experience-form">{% csrf_token %}
+      <input type="hidden" name="action" value="generate">
+      <fieldset class="experience-options">
+        <legend class="sr-only">Experience level</legend>
+        <label class="experience-option" for="level-beginner">
+          <input type="radio" name="level" id="level-beginner" value="beginner" required{% if selected_level == "beginner" %} checked{% endif %}>
+          <span><strong>Beginner</strong><small>Build a steady foundation with manageable sets.</small></span>
+        </label>
+        <label class="experience-option" for="level-moderate">
+          <input type="radio" name="level" id="level-moderate" value="moderate" required{% if selected_level == "moderate" %} checked{% endif %}>
+          <span><strong>Moderate</strong><small>Balanced volume and intensity for regular training.</small></span>
+        </label>
+        <label class="experience-option" for="level-advanced">
+          <input type="radio" name="level" id="level-advanced" value="advanced" required{% if selected_level == "advanced" %} checked{% endif %}>
+          <span><strong>Advanced</strong><small>Get a more demanding session with higher set ranges.</small></span>
+        </label>
+      </fieldset>
+      <div class="split-selection-wrap">
+        <label for="split_day_select"><strong>Today's target split</strong><small>Select muscle groups to train today</small></label>
+        <select id="split_day_select" name="split_day" class="split-select-input">
+          {% for code, label in split_choices %}
+            <option value="{{ code }}"{% if selected_split == code %} selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <button class="button" type="submit">Generate my workout →</button>
+    </form>
+  </div>
+  <section class="panel workout-result" aria-live="polite">
+    <div class="panel-heading"><div><p class="eyebrow">YOUR SESSION{% if saved_plan %} · SAVED TO PROGRESS{% endif %}</p><h2>Workout plan</h2></div>{% if saved_plan %}<a class="text-link" href="{% url 'progress' %}#saved-plans">Follow in Progress →</a>{% endif %}</div>
+    {% if plan.workout %}
+      <div class="list-stack">
+        {% for item in plan.workout %}
+        <article class="workout-exercise {% if item.completed %}workout-exercise-done{% endif %}">
+          <div class="workout-exercise-heading">
+            <span class="workout-step">{{ forloop.counter|stringformat:"02d" }}</span>
+            <div class="workout-exercise-info">
+              <h3><a href="{% url 'exercise_detail' item.guide.external_id %}">{{ item.guide.name }}</a></h3>
+              <p>{{ item.guide.category }}{% if item.guide.equipment %} · {{ item.guide.equipment }}{% endif %}</p>
+            </div>
+            <div class="workout-item-actions">
+              {% if saved_plan %}
+              <form class="workout-done-form" method="post" action="{% url 'toggle_saved_plan_item' saved_plan.pk item.index %}">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="ai_workout">
+                <button class="plan-step-toggle {% if item.completed %}is-done{% endif %}" type="submit">{% if item.completed %}✓ Done{% else %}Mark done{% endif %}</button>
+              </form>
+              <form class="workout-delete-form" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="remove">
+                <input type="hidden" name="index" value="{% if item.index != None %}{{ item.index }}{% else %}{{ forloop.counter0 }}{% endif %}">
+                <button type="submit" class="workout-item-delete-btn" title="Delete this exercise" aria-label="Delete {{ item.guide.name }}">✕</button>
+              </form>
+              {% endif %}
+            </div>
+          </div>
+          <div class="workout-prescription">
+            <span>{{ item.sets }} sets</span>
+            {% if item.reps %}<span>{{ item.reps }} reps</span>{% else %}<span>{{ item.duration_seconds }} sec</span>{% endif %}
+            <span>{{ item.rest_seconds }} sec rest</span>
+          </div>
+          <p class="workout-tip">{{ item.tip }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      
+      <div class="add-exercise-section">
+        <h3 class="add-exercise-title">+ Add an exercise to today's workout</h3>
+        <form method="post" class="add-exercise-form">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="add">
+          <div class="add-exercise-controls">
+            <select name="exercise_id" class="add-exercise-select" required aria-label="Select exercise to add">
+              <option value="" disabled selected>Select from exercise library...</option>
+              {% for ex in all_exercises %}
+                <option value="{{ ex.external_id }}">{{ ex.name }} ({{ ex.category }})</option>
+              {% endfor %}
+            </select>
+            <input type="number" name="sets" min="1" max="10" value="3" class="add-exercise-sets" placeholder="Sets" title="Sets" aria-label="Sets">
+            <input type="text" name="reps" value="8-12 reps" class="add-exercise-reps" placeholder="Reps" title="Reps" aria-label="Reps">
+            <button type="submit" class="button button-small add-exercise-btn">Add to workout</button>
+          </div>
+        </form>
+      </div>
+
+      {% if plan.advice %}<p class="subtle-text workout-safety-note">{{ plan.advice }}</p>{% endif %}
+      <p class="subtle-text">Use a comfortable range of motion and stop if you feel pain. This session is a suggestion, not medical advice.</p>
+    {% else %}
+      <div class="empty-state"><span class="empty-icon" aria-hidden="true">↗</span><p>{% if error %}Correct the issue above and retry to build a new session.{% else %}Choose your level to generate a complete session from exercise guides on this site.{% endif %}</p></div>
+    {% endif %}
+  </section>
+</section>
+{% endblock %}

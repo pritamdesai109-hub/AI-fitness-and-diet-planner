@@ -1,0 +1,6622 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_name": "FitForge AI Indian Food Nutrition Dataset",
+  "description": "Starter dataset matched to the 100 food image files in the supplied ZIP. Search aliases include English, Hinglish and Marathi names.",
+  "locale_support": [
+    "en",
+    "hi-Latn",
+    "mr"
+  ],
+  "nutrition_convention": "All macro values are per 100 g edible portion. Per-gram values are derived by dividing by 100. Serving nutrition should be calculated from serving weight, not stored as separate competing values.",
+  "calculation_formula": "selected_nutrition = nutrition_per_100g * selected_weight_g / 100",
+  "important_data_quality_warning": "Nutrition numbers are provisional estimates. They have not been individually verified against IFCT 2017 in this generated file. Recipe dishes and homemade preparations vary with ingredient ratios, oil, water and serving size. Verify and standardize before presenting as authoritative health data.",
+  "source_references": [
+    {
+      "name": "Indian Food Composition Tables 2017",
+      "publisher": "National Institute of Nutrition, Indian Council of Medical Research",
+      "url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+      "use": "Preferred primary reference for Indian raw ingredients; map each food to its exact IFCT food code."
+    },
+    {
+      "name": "Indian Nutrient Databank (INDB)",
+      "publisher": "Anuvaad Solutions research team",
+      "url": "https://www.anuvaad.org.in/indian-nutrient-databank/",
+      "use": "Potential reference for standardized Indian composite recipes; check licensing and exact recipe match."
+    }
+  ],
+  "image_archive": {
+    "uploaded_filename": "Food.zip",
+    "image_count": 100,
+    "all_images_matched": true
+  },
+  "food_count": 100,
+  "foods": [
+    {
+      "id": "chicken_breast",
+      "name": "Chicken Breast",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Chicken Breast"
+        ],
+        "hinglish": [
+          "chicken breast",
+          "boneless chicken",
+          "chicken",
+          "boneless chicken breast",
+          "chicken breast meat",
+          "chicken breast raw",
+          "chicken breast cooked",
+          "kombdi cha breast"
+        ],
+        "marathi": [
+          "कोंबडीचे स्तन"
+        ]
+      },
+      "search_terms": [
+        "Chicken Breast",
+        "boneless chicken",
+        "chicken",
+        "boneless chicken breast",
+        "chicken breast meat",
+        "chicken breast raw",
+        "chicken breast cooked",
+        "kombdi cha breast",
+        "कोंबडीचे स्तन"
+      ],
+      "image": {
+        "filename": "Chicken Breast.png",
+        "path": "images/foods/Chicken Breast.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 120,
+        "protein_g": 22.5,
+        "carbohydrates_g": 0,
+        "fat_g": 2.6,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 74
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.2,
+        "protein_g": 0.225,
+        "carbohydrates_g": 0.0,
+        "fat_g": 0.026,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.74
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "chicken_regular",
+      "name": "Chicken (Regular Meat)",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Chicken (Regular Meat)"
+        ],
+        "hinglish": [
+          "chicken",
+          "kombdi",
+          "murghi",
+          "regular chicken",
+          "chicken meat"
+        ],
+        "marathi": [
+          "कोंबडी",
+          "मुर्गी"
+        ]
+      },
+      "search_terms": [
+        "Chicken (Regular Meat)",
+        "chicken",
+        "kombdi",
+        "murghi",
+        "regular chicken",
+        "chicken meat",
+        "कोंबडी",
+        "मुर्गी"
+      ],
+      "image": {
+        "filename": "Chicken (Regular meat).png",
+        "path": "images/foods/Chicken (Regular meat).png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked_generic",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 190,
+        "protein_g": 27,
+        "carbohydrates_g": 0,
+        "fat_g": 8,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 75
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.9,
+        "protein_g": 0.27,
+        "carbohydrates_g": 0.0,
+        "fat_g": 0.08,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.75
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "chicken_thigh",
+      "name": "Chicken Thigh",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Chicken Thigh"
+        ],
+        "hinglish": [
+          "chicken thigh",
+          "chicken leg piece",
+          "thigh meat",
+          "chicken leg meat",
+          "kombdi thigh"
+        ],
+        "marathi": [
+          "कोंबडीची मांडी"
+        ]
+      },
+      "search_terms": [
+        "Chicken Thigh",
+        "chicken leg piece",
+        "thigh meat",
+        "chicken leg meat",
+        "kombdi thigh",
+        "कोंबडीची मांडी"
+      ],
+      "image": {
+        "filename": "Chicken Thigh.png",
+        "path": "images/foods/Chicken Thigh.png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked_skinless",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 179,
+        "protein_g": 26,
+        "carbohydrates_g": 0,
+        "fat_g": 8,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 75
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.79,
+        "protein_g": 0.26,
+        "carbohydrates_g": 0.0,
+        "fat_g": 0.08,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.75
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "whole_egg",
+      "name": "Whole Egg",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Whole Egg"
+        ],
+        "hinglish": [
+          "anda",
+          "ande",
+          "egg",
+          "eggs"
+        ],
+        "marathi": [
+          "अंडे",
+          "अंडी",
+          "अंडा"
+        ]
+      },
+      "search_terms": [
+        "Whole Egg",
+        "anda",
+        "ande",
+        "egg",
+        "eggs",
+        "अंडे",
+        "अंडी",
+        "अंडा"
+      ],
+      "image": {
+        "filename": "Whole Egg.png",
+        "path": "images/foods/Whole Egg.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 143,
+        "protein_g": 12.6,
+        "carbohydrates_g": 0.7,
+        "fat_g": 9.5,
+        "fiber_g": 0,
+        "sugar_g": 0.4,
+        "sodium_mg": 142
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.43,
+        "protein_g": 0.126,
+        "carbohydrates_g": 0.007,
+        "fat_g": 0.095,
+        "fiber_g": 0.0,
+        "sugar_g": 0.004,
+        "sodium_mg": 1.42
+      },
+      "serving_options": [
+        {
+          "label": "1 egg",
+          "weight_g": 50.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "boiled_egg",
+      "name": "Boiled Egg",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Boiled Egg"
+        ],
+        "hinglish": [
+          "ubla anda",
+          "boiled anda",
+          "ukadle ande"
+        ],
+        "marathi": [
+          "उकडलेले अंडे",
+          "उबला अंडा"
+        ]
+      },
+      "search_terms": [
+        "Boiled Egg",
+        "ubla anda",
+        "boiled anda",
+        "ukadle ande",
+        "उकडलेले अंडे",
+        "उबला अंडा"
+      ],
+      "image": {
+        "filename": "Boiled Egg.png",
+        "path": "images/foods/Boiled Egg.png",
+        "matched_in_zip": true
+      },
+      "food_state": "boiled",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 155,
+        "protein_g": 12.6,
+        "carbohydrates_g": 1.1,
+        "fat_g": 10.6,
+        "fiber_g": 0,
+        "sugar_g": 1.1,
+        "sodium_mg": 124
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.55,
+        "protein_g": 0.126,
+        "carbohydrates_g": 0.011,
+        "fat_g": 0.106,
+        "fiber_g": 0.0,
+        "sugar_g": 0.011,
+        "sodium_mg": 1.24
+      },
+      "serving_options": [
+        {
+          "label": "1 egg",
+          "weight_g": 50.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "egg_white",
+      "name": "Egg White",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Egg White"
+        ],
+        "hinglish": [
+          "anda white",
+          "egg whites"
+        ],
+        "marathi": [
+          "अंड्याचा पांढरा भाग",
+          "अंडे का सफेद भाग"
+        ]
+      },
+      "search_terms": [
+        "Egg White",
+        "anda white",
+        "egg whites",
+        "अंड्याचा पांढरा भाग",
+        "अंडे का सफेद भाग"
+      ],
+      "image": {
+        "filename": "Egg White.png",
+        "path": "images/foods/Egg White.png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 52,
+        "protein_g": 10.9,
+        "carbohydrates_g": 0.7,
+        "fat_g": 0.2,
+        "fiber_g": 0,
+        "sugar_g": 0.7,
+        "sodium_mg": 166
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.52,
+        "protein_g": 0.109,
+        "carbohydrates_g": 0.007,
+        "fat_g": 0.002,
+        "fiber_g": 0.0,
+        "sugar_g": 0.007,
+        "sodium_mg": 1.66
+      },
+      "serving_options": [
+        {
+          "label": "1 egg white",
+          "weight_g": 33.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "egg_yolk",
+      "name": "Egg Yolk",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Egg Yolk"
+        ],
+        "hinglish": [
+          "anda yolk"
+        ],
+        "marathi": [
+          "अंड्याचा बलक",
+          "अंडे की जर्दी"
+        ]
+      },
+      "search_terms": [
+        "Egg Yolk",
+        "anda yolk",
+        "अंड्याचा बलक",
+        "अंडे की जर्दी"
+      ],
+      "image": {
+        "filename": "Egg Yolk.png",
+        "path": "images/foods/Egg Yolk.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 322,
+        "protein_g": 15.9,
+        "carbohydrates_g": 3.6,
+        "fat_g": 26.5,
+        "fiber_g": 0,
+        "sugar_g": 0.6,
+        "sodium_mg": 48
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.22,
+        "protein_g": 0.159,
+        "carbohydrates_g": 0.036,
+        "fat_g": 0.265,
+        "fiber_g": 0.0,
+        "sugar_g": 0.006,
+        "sodium_mg": 0.48
+      },
+      "serving_options": [
+        {
+          "label": "1 yolk",
+          "weight_g": 17.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "rohu_fish",
+      "name": "Rohu Fish",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Rohu Fish"
+        ],
+        "hinglish": [
+          "rohu machhi",
+          "rohu",
+          "rui fish"
+        ],
+        "marathi": [
+          "रोहू मासा",
+          "रोहू",
+          "रोहू मछली"
+        ]
+      },
+      "search_terms": [
+        "Rohu Fish",
+        "rohu machhi",
+        "rohu",
+        "rui fish",
+        "रोहू मासा",
+        "रोहू",
+        "रोहू मछली"
+      ],
+      "image": {
+        "filename": "Rohu Fish.png",
+        "path": "images/foods/Rohu Fish.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 97,
+        "protein_g": 17.8,
+        "carbohydrates_g": 0,
+        "fat_g": 2.6,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 65
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.97,
+        "protein_g": 0.178,
+        "carbohydrates_g": 0.0,
+        "fat_g": 0.026,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.65
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "pomfret",
+      "name": "Pomfret",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Pomfret"
+        ],
+        "hinglish": [
+          "paplet",
+          "paplet fish"
+        ],
+        "marathi": [
+          "पापलेट",
+          "पापलेट मासा",
+          "पापलेट मछली"
+        ]
+      },
+      "search_terms": [
+        "Pomfret",
+        "paplet",
+        "paplet fish",
+        "पापलेट",
+        "पापलेट मासा",
+        "पापलेट मछली"
+      ],
+      "image": {
+        "filename": "Pomfret.png",
+        "path": "images/foods/Pomfret.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 96,
+        "protein_g": 18.5,
+        "carbohydrates_g": 0,
+        "fat_g": 2,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 65
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.96,
+        "protein_g": 0.185,
+        "carbohydrates_g": 0.0,
+        "fat_g": 0.02,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.65
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "surmai",
+      "name": "Surmai / King Fish",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Surmai / King Fish"
+        ],
+        "hinglish": [
+          "surmai machhi",
+          "surmai",
+          "king fish",
+          "seer fish"
+        ],
+        "marathi": [
+          "सुरमई मासा",
+          "सुरमई",
+          "सुरमई मछली"
+        ]
+      },
+      "search_terms": [
+        "Surmai / King Fish",
+        "surmai machhi",
+        "surmai",
+        "king fish",
+        "seer fish",
+        "सुरमई मासा",
+        "सुरमई",
+        "सुरमई मछली"
+      ],
+      "image": {
+        "filename": "Surmai-King Fish.png",
+        "path": "images/foods/Surmai-King Fish.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 120,
+        "protein_g": 20.5,
+        "carbohydrates_g": 0,
+        "fat_g": 3.5,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 65
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.2,
+        "protein_g": 0.205,
+        "carbohydrates_g": 0.0,
+        "fat_g": 0.035,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.65
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "bangda",
+      "name": "Bangda / Indian Mackerel",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Bangda / Indian Mackerel"
+        ],
+        "hinglish": [
+          "bangda machhi",
+          "bangda",
+          "mackerel",
+          "indian mackerel",
+          "bangda fish"
+        ],
+        "marathi": [
+          "बांगडा",
+          "बांगडा मासा",
+          "बांगड़ा मछली"
+        ]
+      },
+      "search_terms": [
+        "Bangda / Indian Mackerel",
+        "bangda machhi",
+        "bangda",
+        "mackerel",
+        "indian mackerel",
+        "bangda fish",
+        "बांगडा",
+        "बांगडा मासा",
+        "बांगड़ा मछली"
+      ],
+      "image": {
+        "filename": "Bangda-Mackerel.png",
+        "path": "images/foods/Bangda-Mackerel.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 205,
+        "protein_g": 19,
+        "carbohydrates_g": 0,
+        "fat_g": 13.9,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 90
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 2.05,
+        "protein_g": 0.19,
+        "carbohydrates_g": 0.0,
+        "fat_g": 0.139,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.9
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "prawns",
+      "name": "Prawns",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Prawns"
+        ],
+        "hinglish": [
+          "kolambi",
+          "jhinga",
+          "shrimp"
+        ],
+        "marathi": [
+          "कोळंबी",
+          "झींगा"
+        ]
+      },
+      "search_terms": [
+        "Prawns",
+        "kolambi",
+        "jhinga",
+        "shrimp",
+        "कोळंबी",
+        "झींगा"
+      ],
+      "image": {
+        "filename": "Prawns.png",
+        "path": "images/foods/Prawns.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 85,
+        "protein_g": 20.1,
+        "carbohydrates_g": 0.2,
+        "fat_g": 0.5,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 119
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.85,
+        "protein_g": 0.201,
+        "carbohydrates_g": 0.002,
+        "fat_g": 0.005,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 1.19
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Salmon"
+        ],
+        "hinglish": [
+          "salmon fish"
+        ],
+        "marathi": []
+      },
+      "search_terms": [
+        "Salmon",
+        "salmon fish"
+      ],
+      "image": {
+        "filename": "Salmon.png",
+        "path": "images/foods/Salmon.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 208,
+        "protein_g": 20.4,
+        "carbohydrates_g": 0,
+        "fat_g": 13.4,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 59
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 2.08,
+        "protein_g": 0.204,
+        "carbohydrates_g": 0.0,
+        "fat_g": 0.134,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.59
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "cow_milk",
+      "name": "Cow Milk",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Cow Milk"
+        ],
+        "hinglish": [
+          "doodh",
+          "dudh",
+          "milk"
+        ],
+        "marathi": [
+          "गायीचे दूध",
+          "गाय का दूध"
+        ]
+      },
+      "search_terms": [
+        "Cow Milk",
+        "doodh",
+        "dudh",
+        "milk",
+        "गायीचे दूध",
+        "गाय का दूध"
+      ],
+      "image": {
+        "filename": "Cow Milk.png",
+        "path": "images/foods/Cow Milk.png",
+        "matched_in_zip": true
+      },
+      "food_state": "whole",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 61,
+        "protein_g": 3.2,
+        "carbohydrates_g": 4.8,
+        "fat_g": 3.3,
+        "fiber_g": 0,
+        "sugar_g": 5.1,
+        "sodium_mg": 43
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.61,
+        "protein_g": 0.032,
+        "carbohydrates_g": 0.048,
+        "fat_g": 0.033,
+        "fiber_g": 0.0,
+        "sugar_g": 0.051,
+        "sodium_mg": 0.43
+      },
+      "serving_options": [
+        {
+          "label": "1 glass",
+          "weight_g": 250.0,
+          "unit": "ml",
+          "density_assumption": "1 ml approximately 1 g; verify for this liquid"
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "buffalo_milk",
+      "name": "Buffalo Milk",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Buffalo Milk"
+        ],
+        "hinglish": [
+          "mhaisiche doodh",
+          "bhains ka doodh"
+        ],
+        "marathi": [
+          "म्हशीचे दूध",
+          "म्हशीचं दूध",
+          "भैंस का दूध"
+        ]
+      },
+      "search_terms": [
+        "Buffalo Milk",
+        "mhaisiche doodh",
+        "bhains ka doodh",
+        "म्हशीचे दूध",
+        "म्हशीचं दूध",
+        "भैंस का दूध"
+      ],
+      "image": {
+        "filename": "Buffalo Milk.png",
+        "path": "images/foods/Buffalo Milk.png",
+        "matched_in_zip": true
+      },
+      "food_state": "whole",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 97,
+        "protein_g": 3.8,
+        "carbohydrates_g": 5.2,
+        "fat_g": 6.9,
+        "fiber_g": 0,
+        "sugar_g": 5.1,
+        "sodium_mg": 52
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.97,
+        "protein_g": 0.038,
+        "carbohydrates_g": 0.052,
+        "fat_g": 0.069,
+        "fiber_g": 0.0,
+        "sugar_g": 0.051,
+        "sodium_mg": 0.52
+      },
+      "serving_options": [
+        {
+          "label": "1 glass",
+          "weight_g": 250.0,
+          "unit": "ml",
+          "density_assumption": "1 ml approximately 1 g; verify for this liquid"
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "paneer",
+      "name": "Paneer",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Paneer"
+        ],
+        "hinglish": [
+          "panir",
+          "cottage cheese"
+        ],
+        "marathi": [
+          "पनीर"
+        ]
+      },
+      "search_terms": [
+        "Paneer",
+        "panir",
+        "cottage cheese",
+        "पनीर"
+      ],
+      "image": {
+        "filename": "Paneer.png",
+        "path": "images/foods/Paneer.png",
+        "matched_in_zip": true
+      },
+      "food_state": "regular",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 265,
+        "protein_g": 18.3,
+        "carbohydrates_g": 1.2,
+        "fat_g": 20.8,
+        "fiber_g": 0,
+        "sugar_g": 0.5,
+        "sodium_mg": 18
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 2.65,
+        "protein_g": 0.183,
+        "carbohydrates_g": 0.012,
+        "fat_g": 0.208,
+        "fiber_g": 0.0,
+        "sugar_g": 0.005,
+        "sodium_mg": 0.18
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "lowfat_paneer",
+      "name": "Low-fat Paneer",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Low-fat Paneer"
+        ],
+        "hinglish": [
+          "low fat paneer",
+          "lean paneer"
+        ],
+        "marathi": [
+          "कमी फॅट पनीर"
+        ]
+      },
+      "search_terms": [
+        "Low-fat Paneer",
+        "low fat paneer",
+        "lean paneer",
+        "कमी फॅट पनीर"
+      ],
+      "image": {
+        "filename": "Low-fat Paneer.png",
+        "path": "images/foods/Low-fat Paneer.png",
+        "matched_in_zip": true
+      },
+      "food_state": "low_fat",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 170,
+        "protein_g": 24,
+        "carbohydrates_g": 3,
+        "fat_g": 7,
+        "fiber_g": 0,
+        "sugar_g": 2,
+        "sodium_mg": 40
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.7,
+        "protein_g": 0.24,
+        "carbohydrates_g": 0.03,
+        "fat_g": 0.07,
+        "fiber_g": 0.0,
+        "sugar_g": 0.02,
+        "sodium_mg": 0.4
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "curd",
+      "name": "Plain Curd / Dahi",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Plain Curd / Dahi"
+        ],
+        "hinglish": [
+          "dahi",
+          "curd",
+          "plain yogurt",
+          "yogurt",
+          "taak dahi"
+        ],
+        "marathi": [
+          "दही"
+        ]
+      },
+      "search_terms": [
+        "Plain Curd / Dahi",
+        "dahi",
+        "curd",
+        "plain yogurt",
+        "yogurt",
+        "taak dahi",
+        "दही"
+      ],
+      "image": {
+        "filename": "Plain Curd-Dahi.png",
+        "path": "images/foods/Plain Curd-Dahi.png",
+        "matched_in_zip": true
+      },
+      "food_state": "plain",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 61,
+        "protein_g": 3.5,
+        "carbohydrates_g": 4.7,
+        "fat_g": 3.3,
+        "fiber_g": 0,
+        "sugar_g": 4.7,
+        "sodium_mg": 46
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.61,
+        "protein_g": 0.035,
+        "carbohydrates_g": 0.047,
+        "fat_g": 0.033,
+        "fiber_g": 0.0,
+        "sugar_g": 0.047,
+        "sodium_mg": 0.46
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "greek_yogurt",
+      "name": "Greek Yogurt",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Greek Yogurt"
+        ],
+        "hinglish": [
+          "hung curd",
+          "strained yogurt"
+        ],
+        "marathi": [
+          "हंग कर्ड"
+        ]
+      },
+      "search_terms": [
+        "Greek Yogurt",
+        "hung curd",
+        "strained yogurt",
+        "हंग कर्ड"
+      ],
+      "image": {
+        "filename": "Greek Yogurt.png",
+        "path": "images/foods/Greek Yogurt.png",
+        "matched_in_zip": true
+      },
+      "food_state": "plain",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 97,
+        "protein_g": 9,
+        "carbohydrates_g": 3.9,
+        "fat_g": 5,
+        "fiber_g": 0,
+        "sugar_g": 3.2,
+        "sodium_mg": 36
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.97,
+        "protein_g": 0.09,
+        "carbohydrates_g": 0.039,
+        "fat_g": 0.05,
+        "fiber_g": 0.0,
+        "sugar_g": 0.032,
+        "sodium_mg": 0.36
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "buttermilk",
+      "name": "Buttermilk / Chaas",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Buttermilk / Chaas"
+        ],
+        "hinglish": [
+          "chaas",
+          "taak",
+          "mattha",
+          "buttermilk"
+        ],
+        "marathi": [
+          "ताक",
+          "छास",
+          "मठ्ठा"
+        ]
+      },
+      "search_terms": [
+        "Buttermilk / Chaas",
+        "chaas",
+        "taak",
+        "mattha",
+        "buttermilk",
+        "ताक",
+        "छास",
+        "मठ्ठा"
+      ],
+      "image": {
+        "filename": "Buttermilk.png",
+        "path": "images/foods/Buttermilk.png",
+        "matched_in_zip": true
+      },
+      "food_state": "plain",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 40,
+        "protein_g": 3.3,
+        "carbohydrates_g": 4.8,
+        "fat_g": 0.9,
+        "fiber_g": 0,
+        "sugar_g": 4.8,
+        "sodium_mg": 40
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.4,
+        "protein_g": 0.033,
+        "carbohydrates_g": 0.048,
+        "fat_g": 0.009,
+        "fiber_g": 0.0,
+        "sugar_g": 0.048,
+        "sodium_mg": 0.4
+      },
+      "serving_options": [
+        {
+          "label": "1 glass",
+          "weight_g": 250.0,
+          "unit": "ml",
+          "density_assumption": "1 ml approximately 1 g; verify for this liquid"
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Cheese"
+        ],
+        "hinglish": [
+          "cheez"
+        ],
+        "marathi": [
+          "चीज"
+        ]
+      },
+      "search_terms": [
+        "Cheese",
+        "cheez",
+        "चीज"
+      ],
+      "image": {
+        "filename": "Cheese.png",
+        "path": "images/foods/Cheese.png",
+        "matched_in_zip": true
+      },
+      "food_state": "generic",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 350,
+        "protein_g": 22,
+        "carbohydrates_g": 2,
+        "fat_g": 28,
+        "fiber_g": 0,
+        "sugar_g": 0.5,
+        "sodium_mg": 700
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.5,
+        "protein_g": 0.22,
+        "carbohydrates_g": 0.02,
+        "fat_g": 0.28,
+        "fiber_g": 0.0,
+        "sugar_g": 0.005,
+        "sodium_mg": 7.0
+      },
+      "serving_options": [
+        {
+          "label": "1 slice",
+          "weight_g": 20.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Butter"
+        ],
+        "hinglish": [
+          "makkhan"
+        ],
+        "marathi": [
+          "लोणी",
+          "मक्खन"
+        ]
+      },
+      "search_terms": [
+        "Butter",
+        "makkhan",
+        "लोणी",
+        "मक्खन"
+      ],
+      "image": {
+        "filename": "Butter.png",
+        "path": "images/foods/Butter.png",
+        "matched_in_zip": true
+      },
+      "food_state": "regular",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 717,
+        "protein_g": 0.9,
+        "carbohydrates_g": 0.1,
+        "fat_g": 81,
+        "fiber_g": 0,
+        "sugar_g": 0.1,
+        "sodium_mg": 643
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 7.17,
+        "protein_g": 0.009,
+        "carbohydrates_g": 0.001,
+        "fat_g": 0.81,
+        "fiber_g": 0.0,
+        "sugar_g": 0.001,
+        "sodium_mg": 6.43
+      },
+      "serving_options": [
+        {
+          "label": "1 tsp",
+          "weight_g": 5.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "category": "Dairy",
+      "aliases": {
+        "english": [
+          "Ghee"
+        ],
+        "hinglish": [
+          "toop",
+          "tup"
+        ],
+        "marathi": [
+          "तूप",
+          "घी"
+        ]
+      },
+      "search_terms": [
+        "Ghee",
+        "toop",
+        "tup",
+        "तूप",
+        "घी"
+      ],
+      "image": {
+        "filename": "Ghee.png",
+        "path": "images/foods/Ghee.png",
+        "matched_in_zip": true
+      },
+      "food_state": "clarified",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 900,
+        "protein_g": 0,
+        "carbohydrates_g": 0,
+        "fat_g": 100,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 0
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 9.0,
+        "protein_g": 0.0,
+        "carbohydrates_g": 0.0,
+        "fat_g": 1.0,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.0
+      },
+      "serving_options": [
+        {
+          "label": "1 tsp",
+          "weight_g": 5.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "toor_dal",
+      "name": "Toor Dal",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Toor Dal"
+        ],
+        "hinglish": [
+          "toor dal",
+          "tuvar dal",
+          "tur dal",
+          "arhar dal",
+          "varan"
+        ],
+        "marathi": [
+          "तूर डाळ",
+          "तूर दाल"
+        ]
+      },
+      "search_terms": [
+        "Toor Dal",
+        "tuvar dal",
+        "tur dal",
+        "arhar dal",
+        "varan",
+        "तूर डाळ",
+        "तूर दाल"
+      ],
+      "image": {
+        "filename": "Toor Dal.png",
+        "path": "images/foods/Toor Dal.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 343,
+        "protein_g": 22.3,
+        "carbohydrates_g": 57.6,
+        "fat_g": 1.7,
+        "fiber_g": 15,
+        "sugar_g": 2.9,
+        "sodium_mg": 17
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.43,
+        "protein_g": 0.223,
+        "carbohydrates_g": 0.576,
+        "fat_g": 0.017,
+        "fiber_g": 0.15,
+        "sugar_g": 0.029,
+        "sodium_mg": 0.17
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori cooked",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "moong_dal",
+      "name": "Moong Dal",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Moong Dal"
+        ],
+        "hinglish": [
+          "moong dal",
+          "mung dal"
+        ],
+        "marathi": [
+          "मूग डाळ",
+          "मूंग दाल"
+        ]
+      },
+      "search_terms": [
+        "Moong Dal",
+        "mung dal",
+        "मूग डाळ",
+        "मूंग दाल"
+      ],
+      "image": {
+        "filename": "Moong Dal.png",
+        "path": "images/foods/Moong Dal.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 347,
+        "protein_g": 24,
+        "carbohydrates_g": 59.9,
+        "fat_g": 1.2,
+        "fiber_g": 8.2,
+        "sugar_g": 6.6,
+        "sodium_mg": 15
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.47,
+        "protein_g": 0.24,
+        "carbohydrates_g": 0.599,
+        "fat_g": 0.012,
+        "fiber_g": 0.082,
+        "sugar_g": 0.066,
+        "sodium_mg": 0.15
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori cooked",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "masoor_dal",
+      "name": "Masoor Dal",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Masoor Dal"
+        ],
+        "hinglish": [
+          "masoor dal",
+          "red lentils"
+        ],
+        "marathi": [
+          "मसूर डाळ",
+          "मसूर दाल"
+        ]
+      },
+      "search_terms": [
+        "Masoor Dal",
+        "red lentils",
+        "मसूर डाळ",
+        "मसूर दाल"
+      ],
+      "image": {
+        "filename": "Masoor Dal.png",
+        "path": "images/foods/Masoor Dal.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 352,
+        "protein_g": 24.6,
+        "carbohydrates_g": 63.1,
+        "fat_g": 1.1,
+        "fiber_g": 10.7,
+        "sugar_g": 2,
+        "sodium_mg": 6
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.52,
+        "protein_g": 0.246,
+        "carbohydrates_g": 0.631,
+        "fat_g": 0.011,
+        "fiber_g": 0.107,
+        "sugar_g": 0.02,
+        "sodium_mg": 0.06
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori cooked",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "urad_dal",
+      "name": "Urad Dal",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Urad Dal"
+        ],
+        "hinglish": [
+          "urad dal",
+          "black gram"
+        ],
+        "marathi": [
+          "उडीद डाळ",
+          "उड़द दाल"
+        ]
+      },
+      "search_terms": [
+        "Urad Dal",
+        "black gram",
+        "उडीद डाळ",
+        "उड़द दाल"
+      ],
+      "image": {
+        "filename": "Urad Dal.png",
+        "path": "images/foods/Urad Dal.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 341,
+        "protein_g": 25.2,
+        "carbohydrates_g": 58.9,
+        "fat_g": 1.6,
+        "fiber_g": 18.3,
+        "sugar_g": 3.3,
+        "sodium_mg": 38
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.41,
+        "protein_g": 0.252,
+        "carbohydrates_g": 0.589,
+        "fat_g": 0.016,
+        "fiber_g": 0.183,
+        "sugar_g": 0.033,
+        "sodium_mg": 0.38
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori cooked",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "chana_dal",
+      "name": "Chana Dal",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Chana Dal"
+        ],
+        "hinglish": [
+          "chana dal",
+          "split bengal gram"
+        ],
+        "marathi": [
+          "हरभरा डाळ",
+          "चना दाल"
+        ]
+      },
+      "search_terms": [
+        "Chana Dal",
+        "split bengal gram",
+        "हरभरा डाळ",
+        "चना दाल"
+      ],
+      "image": {
+        "filename": "Chana Dal.png",
+        "path": "images/foods/Chana Dal.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 360,
+        "protein_g": 20.8,
+        "carbohydrates_g": 60.9,
+        "fat_g": 5.6,
+        "fiber_g": 12.6,
+        "sugar_g": 10.7,
+        "sodium_mg": 24
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.6,
+        "protein_g": 0.208,
+        "carbohydrates_g": 0.609,
+        "fat_g": 0.056,
+        "fiber_g": 0.126,
+        "sugar_g": 0.107,
+        "sodium_mg": 0.24
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori cooked",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "green_moong",
+      "name": "Whole Green Moong",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Whole Green Moong"
+        ],
+        "hinglish": [
+          "sabut moong",
+          "mung",
+          "moong"
+        ],
+        "marathi": [
+          "हिरवे मूग",
+          "साबुत मूंग"
+        ]
+      },
+      "search_terms": [
+        "Whole Green Moong",
+        "sabut moong",
+        "mung",
+        "moong",
+        "हिरवे मूग",
+        "साबुत मूंग"
+      ],
+      "image": {
+        "filename": "Whole Green Moong.png",
+        "path": "images/foods/Whole Green Moong.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 347,
+        "protein_g": 23.9,
+        "carbohydrates_g": 62.6,
+        "fat_g": 1.2,
+        "fiber_g": 16.3,
+        "sugar_g": 6.6,
+        "sodium_mg": 15
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.47,
+        "protein_g": 0.239,
+        "carbohydrates_g": 0.626,
+        "fat_g": 0.012,
+        "fiber_g": 0.163,
+        "sugar_g": 0.066,
+        "sodium_mg": 0.15
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori cooked",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "kala_chana",
+      "name": "Kala Chana",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Kala Chana"
+        ],
+        "hinglish": [
+          "kala chana",
+          "black chickpeas",
+          "black chana"
+        ],
+        "marathi": [
+          "काळा हरभरा",
+          "काला चना"
+        ]
+      },
+      "search_terms": [
+        "Kala Chana",
+        "black chickpeas",
+        "black chana",
+        "काळा हरभरा",
+        "काला चना"
+      ],
+      "image": {
+        "filename": "Kala Chana.png",
+        "path": "images/foods/Kala Chana.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 360,
+        "protein_g": 20.5,
+        "carbohydrates_g": 60.7,
+        "fat_g": 5.3,
+        "fiber_g": 12.2,
+        "sugar_g": 10.7,
+        "sodium_mg": 24
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.6,
+        "protein_g": 0.205,
+        "carbohydrates_g": 0.607,
+        "fat_g": 0.053,
+        "fiber_g": 0.122,
+        "sugar_g": 0.107,
+        "sodium_mg": 0.24
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori boiled",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "kabuli_chana",
+      "name": "White Chickpeas / Kabuli Chana",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "White Chickpeas / Kabuli Chana"
+        ],
+        "hinglish": [
+          "kabuli chana",
+          "white chana",
+          "chole",
+          "chickpeas"
+        ],
+        "marathi": [
+          "काबुली चणे",
+          "काबुली चना",
+          "छोले"
+        ]
+      },
+      "search_terms": [
+        "White Chickpeas / Kabuli Chana",
+        "kabuli chana",
+        "white chana",
+        "chole",
+        "chickpeas",
+        "काबुली चणे",
+        "काबुली चना",
+        "छोले"
+      ],
+      "image": {
+        "filename": "White Chickpeas-Kabuli Chana.png",
+        "path": "images/foods/White Chickpeas-Kabuli Chana.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 378,
+        "protein_g": 20.5,
+        "carbohydrates_g": 63,
+        "fat_g": 6,
+        "fiber_g": 12.2,
+        "sugar_g": 10.7,
+        "sodium_mg": 24
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.78,
+        "protein_g": 0.205,
+        "carbohydrates_g": 0.63,
+        "fat_g": 0.06,
+        "fiber_g": 0.122,
+        "sugar_g": 0.107,
+        "sodium_mg": 0.24
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori boiled",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "rajma",
+      "name": "Rajma",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Rajma"
+        ],
+        "hinglish": [
+          "kidney beans"
+        ],
+        "marathi": [
+          "राजमा"
+        ]
+      },
+      "search_terms": [
+        "Rajma",
+        "kidney beans",
+        "राजमा"
+      ],
+      "image": {
+        "filename": "Rajma.png",
+        "path": "images/foods/Rajma.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 333,
+        "protein_g": 23.6,
+        "carbohydrates_g": 60,
+        "fat_g": 0.8,
+        "fiber_g": 24.9,
+        "sugar_g": 2.2,
+        "sodium_mg": 24
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.33,
+        "protein_g": 0.236,
+        "carbohydrates_g": 0.6,
+        "fat_g": 0.008,
+        "fiber_g": 0.249,
+        "sugar_g": 0.022,
+        "sodium_mg": 0.24
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori cooked",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "lobia",
+      "name": "Black-eyed Peas / Lobia",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Black-eyed Peas / Lobia"
+        ],
+        "hinglish": [
+          "lobia",
+          "chawli",
+          "black eyed peas"
+        ],
+        "marathi": [
+          "चवळी",
+          "लोबिया",
+          "चौली"
+        ]
+      },
+      "search_terms": [
+        "Black-eyed Peas / Lobia",
+        "lobia",
+        "chawli",
+        "black eyed peas",
+        "चवळी",
+        "लोबिया",
+        "चौली"
+      ],
+      "image": {
+        "filename": "Black-eyed Peas-Lobia.png",
+        "path": "images/foods/Black-eyed Peas-Lobia.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw_dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 336,
+        "protein_g": 23.5,
+        "carbohydrates_g": 60,
+        "fat_g": 1.3,
+        "fiber_g": 10.6,
+        "sugar_g": 6.9,
+        "sodium_mg": 16
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.36,
+        "protein_g": 0.235,
+        "carbohydrates_g": 0.6,
+        "fat_g": 0.013,
+        "fiber_g": 0.106,
+        "sugar_g": 0.069,
+        "sodium_mg": 0.16
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "1 katori cooked",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "soybeans",
+      "name": "Soybeans",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Soybeans"
+        ],
+        "hinglish": [
+          "soybean",
+          "soya bean",
+          "soy beans",
+          "soy"
+        ],
+        "marathi": [
+          "सोयाबीन"
+        ]
+      },
+      "search_terms": [
+        "Soybeans",
+        "soybean",
+        "soya bean",
+        "soy beans",
+        "soy",
+        "सोयाबीन"
+      ],
+      "image": {
+        "filename": "Soybeans.png",
+        "path": "images/foods/Soybeans.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 446,
+        "protein_g": 36.5,
+        "carbohydrates_g": 30.2,
+        "fat_g": 19.9,
+        "fiber_g": 9.3,
+        "sugar_g": 7.3,
+        "sodium_mg": 2
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 4.46,
+        "protein_g": 0.365,
+        "carbohydrates_g": 0.302,
+        "fat_g": 0.199,
+        "fiber_g": 0.093,
+        "sugar_g": 0.073,
+        "sodium_mg": 0.02
+      },
+      "serving_options": [
+        {
+          "label": "30 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "soya_chunks",
+      "name": "Soya Chunks",
+      "category": "Pulses",
+      "aliases": {
+        "english": [
+          "Soya Chunks"
+        ],
+        "hinglish": [
+          "soya chunks",
+          "soya wadi",
+          "soy chunks",
+          "nutrela"
+        ],
+        "marathi": [
+          "सोया चंक्स",
+          "सोया वडी"
+        ]
+      },
+      "search_terms": [
+        "Soya Chunks",
+        "soya wadi",
+        "soy chunks",
+        "nutrela",
+        "सोया चंक्स",
+        "सोया वडी"
+      ],
+      "image": {
+        "filename": "Soya Chunks.png",
+        "path": "images/foods/Soya Chunks.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 345,
+        "protein_g": 52,
+        "carbohydrates_g": 33,
+        "fat_g": 0.5,
+        "fiber_g": 13,
+        "sugar_g": 7,
+        "sodium_mg": 2
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.45,
+        "protein_g": 0.52,
+        "carbohydrates_g": 0.33,
+        "fat_g": 0.005,
+        "fiber_g": 0.13,
+        "sugar_g": 0.07,
+        "sodium_mg": 0.02
+      },
+      "serving_options": [
+        {
+          "label": "25 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        },
+        {
+          "label": "50 g dry",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "white_rice",
+      "name": "White Rice (Cooked)",
+      "category": "Grains",
+      "aliases": {
+        "english": [
+          "White Rice (Cooked)"
+        ],
+        "hinglish": [
+          "bhat",
+          "bhaat",
+          "chawal",
+          "rice",
+          "cooked rice",
+          "white rice",
+          "tandul bhat"
+        ],
+        "marathi": [
+          "भात",
+          "चावल"
+        ]
+      },
+      "search_terms": [
+        "White Rice (Cooked)",
+        "bhat",
+        "bhaat",
+        "chawal",
+        "rice",
+        "cooked rice",
+        "white rice",
+        "tandul bhat",
+        "भात",
+        "चावल"
+      ],
+      "image": {
+        "filename": "White Rice (Cooked).png",
+        "path": "images/foods/White Rice (Cooked).png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 130,
+        "protein_g": 2.7,
+        "carbohydrates_g": 28.2,
+        "fat_g": 0.3,
+        "fiber_g": 0.4,
+        "sugar_g": 0.1,
+        "sodium_mg": 1
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.3,
+        "protein_g": 0.027,
+        "carbohydrates_g": 0.282,
+        "fat_g": 0.003,
+        "fiber_g": 0.004,
+        "sugar_g": 0.001,
+        "sodium_mg": 0.01
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "brown_rice",
+      "name": "Brown Rice (Cooked)",
+      "category": "Grains",
+      "aliases": {
+        "english": [
+          "Brown Rice (Cooked)"
+        ],
+        "hinglish": [
+          "brown rice",
+          "cooked brown rice"
+        ],
+        "marathi": [
+          "तांदूळ brown rice"
+        ]
+      },
+      "search_terms": [
+        "Brown Rice (Cooked)",
+        "brown rice",
+        "cooked brown rice",
+        "तांदूळ brown rice"
+      ],
+      "image": {
+        "filename": "Brown Rice (Cooked).png",
+        "path": "images/foods/Brown Rice (Cooked).png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 123,
+        "protein_g": 2.7,
+        "carbohydrates_g": 25.6,
+        "fat_g": 1,
+        "fiber_g": 1.6,
+        "sugar_g": 0.4,
+        "sodium_mg": 4
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.23,
+        "protein_g": 0.027,
+        "carbohydrates_g": 0.256,
+        "fat_g": 0.01,
+        "fiber_g": 0.016,
+        "sugar_g": 0.004,
+        "sodium_mg": 0.04
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "chapati",
+      "name": "Chapati / Roti",
+      "category": "Grains",
+      "aliases": {
+        "english": [
+          "Chapati / Roti"
+        ],
+        "hinglish": [
+          "chapati",
+          "roti",
+          "poli",
+          "fulka",
+          "phulka"
+        ],
+        "marathi": [
+          "पोळी",
+          "चपाती",
+          "रोटी"
+        ]
+      },
+      "search_terms": [
+        "Chapati / Roti",
+        "chapati",
+        "roti",
+        "poli",
+        "fulka",
+        "phulka",
+        "पोळी",
+        "चपाती",
+        "रोटी"
+      ],
+      "image": {
+        "filename": "Chapati  Roti.png",
+        "path": "images/foods/Chapati  Roti.png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked_plain",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 297,
+        "protein_g": 9.8,
+        "carbohydrates_g": 46.1,
+        "fat_g": 7.5,
+        "fiber_g": 7.6,
+        "sugar_g": 2.5,
+        "sodium_mg": 400
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 2.97,
+        "protein_g": 0.098,
+        "carbohydrates_g": 0.461,
+        "fat_g": 0.075,
+        "fiber_g": 0.076,
+        "sugar_g": 0.025,
+        "sodium_mg": 4.0
+      },
+      "serving_options": [
+        {
+          "label": "1 medium chapati",
+          "weight_g": 35.0
+        },
+        {
+          "label": "2 chapatis",
+          "weight_g": 70.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "phulka",
+      "name": "Phulka",
+      "category": "Grains",
+      "aliases": {
+        "english": [
+          "Phulka"
+        ],
+        "hinglish": [
+          "phulka",
+          "fulka"
+        ],
+        "marathi": [
+          "फुलका",
+          "फुलके"
+        ]
+      },
+      "search_terms": [
+        "Phulka",
+        "fulka",
+        "फुलका",
+        "फुलके"
+      ],
+      "image": {
+        "filename": "Phulka.png",
+        "path": "images/foods/Phulka.png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked_plain",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 280,
+        "protein_g": 9,
+        "carbohydrates_g": 49,
+        "fat_g": 4,
+        "fiber_g": 7,
+        "sugar_g": 2,
+        "sodium_mg": 350
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 2.8,
+        "protein_g": 0.09,
+        "carbohydrates_g": 0.49,
+        "fat_g": 0.04,
+        "fiber_g": 0.07,
+        "sugar_g": 0.02,
+        "sodium_mg": 3.5
+      },
+      "serving_options": [
+        {
+          "label": "1 phulka",
+          "weight_g": 30.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "multigrain_roti",
+      "name": "Multigrain Roti",
+      "category": "Grains",
+      "aliases": {
+        "english": [
+          "Multigrain Roti"
+        ],
+        "hinglish": [
+          "multigrain chapati",
+          "multi grain poli"
+        ],
+        "marathi": [
+          "मल्टीग्रेन पोळी"
+        ]
+      },
+      "search_terms": [
+        "Multigrain Roti",
+        "multigrain chapati",
+        "multi grain poli",
+        "मल्टीग्रेन पोळी"
+      ],
+      "image": {
+        "filename": "Multigrain Roti.png",
+        "path": "images/foods/Multigrain Roti.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 290,
+        "protein_g": 10,
+        "carbohydrates_g": 48,
+        "fat_g": 6,
+        "fiber_g": 8,
+        "sugar_g": 2,
+        "sodium_mg": 350
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 2.9,
+        "protein_g": 0.1,
+        "carbohydrates_g": 0.48,
+        "fat_g": 0.06,
+        "fiber_g": 0.08,
+        "sugar_g": 0.02,
+        "sodium_mg": 3.5
+      },
+      "serving_options": [
+        {
+          "label": "1 roti",
+          "weight_g": 40.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "jowar_bhakri",
+      "name": "Jowar Bhakri",
+      "category": "Grains",
+      "aliases": {
+        "english": [
+          "Jowar Bhakri"
+        ],
+        "hinglish": [
+          "jowar bhakri",
+          "jwari bhakri",
+          "jowari bhakri",
+          "jowar roti"
+        ],
+        "marathi": [
+          "ज्वारीची भाकरी",
+          "ज्वारी भाकरी"
+        ]
+      },
+      "search_terms": [
+        "Jowar Bhakri",
+        "jwari bhakri",
+        "jowari bhakri",
+        "jowar roti",
+        "ज्वारीची भाकरी",
+        "ज्वारी भाकरी"
+      ],
+      "image": {
+        "filename": "Jowar Bhakri.png",
+        "path": "images/foods/Jowar Bhakri.png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked_plain",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 330,
+        "protein_g": 10.4,
+        "carbohydrates_g": 72.6,
+        "fat_g": 1.9,
+        "fiber_g": 9.7,
+        "sugar_g": 0.5,
+        "sodium_mg": 5
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.3,
+        "protein_g": 0.104,
+        "carbohydrates_g": 0.726,
+        "fat_g": 0.019,
+        "fiber_g": 0.097,
+        "sugar_g": 0.005,
+        "sodium_mg": 0.05
+      },
+      "serving_options": [
+        {
+          "label": "1 medium bhakri",
+          "weight_g": 60.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "bajra_bhakri",
+      "name": "Bajra Bhakri",
+      "category": "Grains",
+      "aliases": {
+        "english": [
+          "Bajra Bhakri"
+        ],
+        "hinglish": [
+          "bajra bhakri",
+          "bajrichi bhakri",
+          "bajra roti"
+        ],
+        "marathi": [
+          "बाजरीची भाकरी",
+          "बाजरी भाकरी",
+          "बाजरे की रोटी"
+        ]
+      },
+      "search_terms": [
+        "Bajra Bhakri",
+        "bajrichi bhakri",
+        "bajra roti",
+        "बाजरीची भाकरी",
+        "बाजरी भाकरी",
+        "बाजरे की रोटी"
+      ],
+      "image": {
+        "filename": "Bajra Bhakri.png",
+        "path": "images/foods/Bajra Bhakri.png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked_plain",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 361,
+        "protein_g": 11.6,
+        "carbohydrates_g": 67.5,
+        "fat_g": 5,
+        "fiber_g": 11.3,
+        "sugar_g": 2,
+        "sodium_mg": 5
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.61,
+        "protein_g": 0.116,
+        "carbohydrates_g": 0.675,
+        "fat_g": 0.05,
+        "fiber_g": 0.113,
+        "sugar_g": 0.02,
+        "sodium_mg": 0.05
+      },
+      "serving_options": [
+        {
+          "label": "1 medium bhakri",
+          "weight_g": 60.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "ragi_bhakri",
+      "name": "Ragi Bhakri",
+      "category": "Grains",
+      "aliases": {
+        "english": [
+          "Ragi Bhakri"
+        ],
+        "hinglish": [
+          "ragi bhakri",
+          "nachni bhakri",
+          "ragi roti"
+        ],
+        "marathi": [
+          "नाचणीची भाकरी",
+          "नाचणी भाकरी",
+          "रागी रोटी"
+        ]
+      },
+      "search_terms": [
+        "Ragi Bhakri",
+        "nachni bhakri",
+        "ragi roti",
+        "नाचणीची भाकरी",
+        "नाचणी भाकरी",
+        "रागी रोटी"
+      ],
+      "image": {
+        "filename": "Ragi Bhakri.png",
+        "path": "images/foods/Ragi Bhakri.png",
+        "matched_in_zip": true
+      },
+      "food_state": "cooked_plain",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 336,
+        "protein_g": 7.3,
+        "carbohydrates_g": 72,
+        "fat_g": 1.5,
+        "fiber_g": 11.5,
+        "sugar_g": 0.6,
+        "sodium_mg": 5
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 3.36,
+        "protein_g": 0.073,
+        "carbohydrates_g": 0.72,
+        "fat_g": 0.015,
+        "fiber_g": 0.115,
+        "sugar_g": 0.006,
+        "sodium_mg": 0.05
+      },
+      "serving_options": [
+        {
+          "label": "1 medium bhakri",
+          "weight_g": 60.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Potato"
+        ],
+        "hinglish": [
+          "batata",
+          "aloo"
+        ],
+        "marathi": [
+          "बटाटा",
+          "आलू"
+        ]
+      },
+      "search_terms": [
+        "Potato",
+        "batata",
+        "aloo",
+        "बटाटा",
+        "आलू"
+      ],
+      "image": {
+        "filename": "Potato.png",
+        "path": "images/foods/Potato.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 77,
+        "protein_g": 2,
+        "carbohydrates_g": 17.5,
+        "fat_g": 0.1,
+        "fiber_g": 2.2,
+        "sugar_g": 0.8,
+        "sodium_mg": 6
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.77,
+        "protein_g": 0.02,
+        "carbohydrates_g": 0.175,
+        "fat_g": 0.001,
+        "fiber_g": 0.022,
+        "sugar_g": 0.008,
+        "sodium_mg": 0.06
+      },
+      "serving_options": [
+        {
+          "label": "1 medium potato",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "potato_sabji",
+      "name": "Potato Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Potato Sabji"
+        ],
+        "hinglish": [
+          "batata bhaji",
+          "aloo sabzi"
+        ],
+        "marathi": [
+          "बटाट्याची भाजी",
+          "आलू की सब्जी"
+        ]
+      },
+      "search_terms": [
+        "Potato Sabji",
+        "batata bhaji",
+        "aloo sabzi",
+        "बटाट्याची भाजी",
+        "आलू की सब्जी"
+      ],
+      "image": {
+        "filename": "Potato Sabji.png",
+        "path": "images/foods/Potato Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 120,
+        "protein_g": 2.2,
+        "carbohydrates_g": 17,
+        "fat_g": 4.5,
+        "fiber_g": 2.5,
+        "sugar_g": 2,
+        "sodium_mg": 250
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.2,
+        "protein_g": 0.022,
+        "carbohydrates_g": 0.17,
+        "fat_g": 0.045,
+        "fiber_g": 0.025,
+        "sugar_g": 0.02,
+        "sodium_mg": 2.5
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Sweet Potato"
+        ],
+        "hinglish": [
+          "ratale",
+          "shakarkandi"
+        ],
+        "marathi": [
+          "रताळे",
+          "शकरकंद"
+        ]
+      },
+      "search_terms": [
+        "Sweet Potato",
+        "ratale",
+        "shakarkandi",
+        "रताळे",
+        "शकरकंद"
+      ],
+      "image": {
+        "filename": "Sweet Potato.png",
+        "path": "images/foods/Sweet Potato.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 86,
+        "protein_g": 1.6,
+        "carbohydrates_g": 20.1,
+        "fat_g": 0.1,
+        "fiber_g": 3,
+        "sugar_g": 4.2,
+        "sodium_mg": 55
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.86,
+        "protein_g": 0.016,
+        "carbohydrates_g": 0.201,
+        "fat_g": 0.001,
+        "fiber_g": 0.03,
+        "sugar_g": 0.042,
+        "sodium_mg": 0.55
+      },
+      "serving_options": [
+        {
+          "label": "1 medium",
+          "weight_g": 130.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach / Palak",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Spinach / Palak"
+        ],
+        "hinglish": [
+          "palak",
+          "spinach",
+          "palak leaves"
+        ],
+        "marathi": [
+          "पालक"
+        ]
+      },
+      "search_terms": [
+        "Spinach / Palak",
+        "palak",
+        "spinach",
+        "palak leaves",
+        "पालक"
+      ],
+      "image": {
+        "filename": "Spinach Palak.png",
+        "path": "images/foods/Spinach Palak.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 23,
+        "protein_g": 2.9,
+        "carbohydrates_g": 3.6,
+        "fat_g": 0.4,
+        "fiber_g": 2.2,
+        "sugar_g": 0.4,
+        "sodium_mg": 79
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.23,
+        "protein_g": 0.029,
+        "carbohydrates_g": 0.036,
+        "fat_g": 0.004,
+        "fiber_g": 0.022,
+        "sugar_g": 0.004,
+        "sodium_mg": 0.79
+      },
+      "serving_options": [
+        {
+          "label": "1 cup",
+          "weight_g": 30.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "spinach_sabji",
+      "name": "Spinach Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Spinach Sabji"
+        ],
+        "hinglish": [
+          "palak sabji",
+          "spinach sabzi"
+        ],
+        "marathi": [
+          "पालकची भाजी",
+          "पालक की सब्जी"
+        ]
+      },
+      "search_terms": [
+        "Spinach Sabji",
+        "palak sabji",
+        "spinach sabzi",
+        "पालकची भाजी",
+        "पालक की सब्जी"
+      ],
+      "image": {
+        "filename": "Spinach Palak Sabji.png",
+        "path": "images/foods/Spinach Palak Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 75,
+        "protein_g": 3,
+        "carbohydrates_g": 7,
+        "fat_g": 3.5,
+        "fiber_g": 3,
+        "sugar_g": 1.5,
+        "sodium_mg": 250
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.75,
+        "protein_g": 0.03,
+        "carbohydrates_g": 0.07,
+        "fat_g": 0.035,
+        "fiber_g": 0.03,
+        "sugar_g": 0.015,
+        "sodium_mg": 2.5
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Broccoli"
+        ],
+        "hinglish": [],
+        "marathi": [
+          "ब्रोकोली"
+        ]
+      },
+      "search_terms": [
+        "Broccoli",
+        "ब्रोकोली"
+      ],
+      "image": {
+        "filename": "Broccoli.png",
+        "path": "images/foods/Broccoli.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 34,
+        "protein_g": 2.8,
+        "carbohydrates_g": 6.6,
+        "fat_g": 0.4,
+        "fiber_g": 2.6,
+        "sugar_g": 1.7,
+        "sodium_mg": 33
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.34,
+        "protein_g": 0.028,
+        "carbohydrates_g": 0.066,
+        "fat_g": 0.004,
+        "fiber_g": 0.026,
+        "sugar_g": 0.017,
+        "sodium_mg": 0.33
+      },
+      "serving_options": [
+        {
+          "label": "1 cup",
+          "weight_g": 90.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "broccoli_sabji",
+      "name": "Broccoli Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Broccoli Sabji"
+        ],
+        "hinglish": [
+          "broccoli sabzi"
+        ],
+        "marathi": []
+      },
+      "search_terms": [
+        "Broccoli Sabji",
+        "broccoli sabzi"
+      ],
+      "image": {
+        "filename": "Broccoli Sabji.png",
+        "path": "images/foods/Broccoli Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 75,
+        "protein_g": 3,
+        "carbohydrates_g": 7,
+        "fat_g": 3.5,
+        "fiber_g": 3,
+        "sugar_g": 2,
+        "sodium_mg": 200
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.75,
+        "protein_g": 0.03,
+        "carbohydrates_g": 0.07,
+        "fat_g": 0.035,
+        "fiber_g": 0.03,
+        "sugar_g": 0.02,
+        "sodium_mg": 2.0
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Cauliflower"
+        ],
+        "hinglish": [
+          "phool gobi",
+          "flower"
+        ],
+        "marathi": [
+          "फुलकोबी",
+          "फ्लॉवर",
+          "गोभी"
+        ]
+      },
+      "search_terms": [
+        "Cauliflower",
+        "phool gobi",
+        "flower",
+        "फुलकोबी",
+        "फ्लॉवर",
+        "गोभी"
+      ],
+      "image": {
+        "filename": "Cauliflower.png",
+        "path": "images/foods/Cauliflower.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 25,
+        "protein_g": 1.9,
+        "carbohydrates_g": 5,
+        "fat_g": 0.3,
+        "fiber_g": 2,
+        "sugar_g": 1.9,
+        "sodium_mg": 30
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.25,
+        "protein_g": 0.019,
+        "carbohydrates_g": 0.05,
+        "fat_g": 0.003,
+        "fiber_g": 0.02,
+        "sugar_g": 0.019,
+        "sodium_mg": 0.3
+      },
+      "serving_options": [
+        {
+          "label": "1 cup",
+          "weight_g": 100.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "cauliflower_sabji",
+      "name": "Cauliflower Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Cauliflower Sabji"
+        ],
+        "hinglish": [
+          "flower bhaji"
+        ],
+        "marathi": [
+          "फुलकोबीची भाजी",
+          "गोभी की सब्जी"
+        ]
+      },
+      "search_terms": [
+        "Cauliflower Sabji",
+        "flower bhaji",
+        "फुलकोबीची भाजी",
+        "गोभी की सब्जी"
+      ],
+      "image": {
+        "filename": "Cauliflower Sabji.png",
+        "path": "images/foods/Cauliflower Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 90,
+        "protein_g": 2.5,
+        "carbohydrates_g": 8,
+        "fat_g": 5,
+        "fiber_g": 3,
+        "sugar_g": 2,
+        "sodium_mg": 220
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.9,
+        "protein_g": 0.025,
+        "carbohydrates_g": 0.08,
+        "fat_g": 0.05,
+        "fiber_g": 0.03,
+        "sugar_g": 0.02,
+        "sodium_mg": 2.2
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Cabbage"
+        ],
+        "hinglish": [
+          "kobi",
+          "patta gobi"
+        ],
+        "marathi": [
+          "कोबी",
+          "पत्ता गोभी"
+        ]
+      },
+      "search_terms": [
+        "Cabbage",
+        "kobi",
+        "patta gobi",
+        "कोबी",
+        "पत्ता गोभी"
+      ],
+      "image": {
+        "filename": "Cabbage.png",
+        "path": "images/foods/Cabbage.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 25,
+        "protein_g": 1.3,
+        "carbohydrates_g": 5.8,
+        "fat_g": 0.1,
+        "fiber_g": 2.5,
+        "sugar_g": 3.2,
+        "sodium_mg": 18
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.25,
+        "protein_g": 0.013,
+        "carbohydrates_g": 0.058,
+        "fat_g": 0.001,
+        "fiber_g": 0.025,
+        "sugar_g": 0.032,
+        "sodium_mg": 0.18
+      },
+      "serving_options": [
+        {
+          "label": "1 cup",
+          "weight_g": 90.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "cabbage_sabji",
+      "name": "Cabbage Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Cabbage Sabji"
+        ],
+        "hinglish": [
+          "kobi bhaji"
+        ],
+        "marathi": [
+          "कोबीची भाजी",
+          "पत्ता गोभी की सब्जी"
+        ]
+      },
+      "search_terms": [
+        "Cabbage Sabji",
+        "kobi bhaji",
+        "कोबीची भाजी",
+        "पत्ता गोभी की सब्जी"
+      ],
+      "image": {
+        "filename": "Cabbage Sabji.png",
+        "path": "images/foods/Cabbage Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 80,
+        "protein_g": 2,
+        "carbohydrates_g": 8,
+        "fat_g": 4,
+        "fiber_g": 3,
+        "sugar_g": 3,
+        "sodium_mg": 200
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.8,
+        "protein_g": 0.02,
+        "carbohydrates_g": 0.08,
+        "fat_g": 0.04,
+        "fiber_g": 0.03,
+        "sugar_g": 0.03,
+        "sodium_mg": 2.0
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Carrot"
+        ],
+        "hinglish": [
+          "gajar"
+        ],
+        "marathi": [
+          "गाजर"
+        ]
+      },
+      "search_terms": [
+        "Carrot",
+        "gajar",
+        "गाजर"
+      ],
+      "image": {
+        "filename": "Carrot.png",
+        "path": "images/foods/Carrot.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 41,
+        "protein_g": 0.9,
+        "carbohydrates_g": 9.6,
+        "fat_g": 0.2,
+        "fiber_g": 2.8,
+        "sugar_g": 4.7,
+        "sodium_mg": 69
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.41,
+        "protein_g": 0.009,
+        "carbohydrates_g": 0.096,
+        "fat_g": 0.002,
+        "fiber_g": 0.028,
+        "sugar_g": 0.047,
+        "sodium_mg": 0.69
+      },
+      "serving_options": [
+        {
+          "label": "1 medium carrot",
+          "weight_g": 60.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "beetroot",
+      "name": "Beetroot",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Beetroot"
+        ],
+        "hinglish": [
+          "beet"
+        ],
+        "marathi": [
+          "बीट",
+          "बीटरूट",
+          "चुकंदर"
+        ]
+      },
+      "search_terms": [
+        "Beetroot",
+        "beet",
+        "बीट",
+        "बीटरूट",
+        "चुकंदर"
+      ],
+      "image": {
+        "filename": "Beetroot.png",
+        "path": "images/foods/Beetroot.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 43,
+        "protein_g": 1.6,
+        "carbohydrates_g": 9.6,
+        "fat_g": 0.2,
+        "fiber_g": 2.8,
+        "sugar_g": 6.8,
+        "sodium_mg": 78
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.43,
+        "protein_g": 0.016,
+        "carbohydrates_g": 0.096,
+        "fat_g": 0.002,
+        "fiber_g": 0.028,
+        "sugar_g": 0.068,
+        "sodium_mg": 0.78
+      },
+      "serving_options": [
+        {
+          "label": "1 small beet",
+          "weight_g": 80.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Cucumber"
+        ],
+        "hinglish": [
+          "kakdi",
+          "kheera"
+        ],
+        "marathi": [
+          "काकडी",
+          "खीरा"
+        ]
+      },
+      "search_terms": [
+        "Cucumber",
+        "kakdi",
+        "kheera",
+        "काकडी",
+        "खीरा"
+      ],
+      "image": {
+        "filename": "Cucumber.png",
+        "path": "images/foods/Cucumber.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 15,
+        "protein_g": 0.7,
+        "carbohydrates_g": 3.6,
+        "fat_g": 0.1,
+        "fiber_g": 0.5,
+        "sugar_g": 1.7,
+        "sodium_mg": 2
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.15,
+        "protein_g": 0.007,
+        "carbohydrates_g": 0.036,
+        "fat_g": 0.001,
+        "fiber_g": 0.005,
+        "sugar_g": 0.017,
+        "sodium_mg": 0.02
+      },
+      "serving_options": [
+        {
+          "label": "1 medium",
+          "weight_g": 200.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Tomato"
+        ],
+        "hinglish": [
+          "tamatar"
+        ],
+        "marathi": [
+          "टोमॅटो",
+          "टमाटर"
+        ]
+      },
+      "search_terms": [
+        "Tomato",
+        "tamatar",
+        "टोमॅटो",
+        "टमाटर"
+      ],
+      "image": {
+        "filename": "Tomato.png",
+        "path": "images/foods/Tomato.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 18,
+        "protein_g": 0.9,
+        "carbohydrates_g": 3.9,
+        "fat_g": 0.2,
+        "fiber_g": 1.2,
+        "sugar_g": 2.6,
+        "sodium_mg": 5
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.18,
+        "protein_g": 0.009,
+        "carbohydrates_g": 0.039,
+        "fat_g": 0.002,
+        "fiber_g": 0.012,
+        "sugar_g": 0.026,
+        "sodium_mg": 0.05
+      },
+      "serving_options": [
+        {
+          "label": "1 medium tomato",
+          "weight_g": 120.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "green_peas",
+      "name": "Green Peas",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Green Peas"
+        ],
+        "hinglish": [
+          "vatana",
+          "matar"
+        ],
+        "marathi": [
+          "वाटाणे",
+          "मटर"
+        ]
+      },
+      "search_terms": [
+        "Green Peas",
+        "vatana",
+        "matar",
+        "वाटाणे",
+        "मटर"
+      ],
+      "image": {
+        "filename": "Green Peas.png",
+        "path": "images/foods/Green Peas.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 81,
+        "protein_g": 5.4,
+        "carbohydrates_g": 14.5,
+        "fat_g": 0.4,
+        "fiber_g": 5.1,
+        "sugar_g": 5.7,
+        "sodium_mg": 5
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.81,
+        "protein_g": 0.054,
+        "carbohydrates_g": 0.145,
+        "fat_g": 0.004,
+        "fiber_g": 0.051,
+        "sugar_g": 0.057,
+        "sodium_mg": 0.05
+      },
+      "serving_options": [
+        {
+          "label": "1 cup",
+          "weight_g": 145.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "green_peas_sabji",
+      "name": "Green Peas Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Green Peas Sabji"
+        ],
+        "hinglish": [
+          "matar sabji",
+          "vatana bhaji"
+        ],
+        "marathi": [
+          "वाटाण्याची भाजी",
+          "मटर की सब्जी"
+        ]
+      },
+      "search_terms": [
+        "Green Peas Sabji",
+        "matar sabji",
+        "vatana bhaji",
+        "वाटाण्याची भाजी",
+        "मटर की सब्जी"
+      ],
+      "image": {
+        "filename": "Green Peas Sabji.png",
+        "path": "images/foods/Green Peas Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 110,
+        "protein_g": 4,
+        "carbohydrates_g": 13,
+        "fat_g": 4.5,
+        "fiber_g": 4,
+        "sugar_g": 4,
+        "sodium_mg": 220
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.1,
+        "protein_g": 0.04,
+        "carbohydrates_g": 0.13,
+        "fat_g": 0.045,
+        "fiber_g": 0.04,
+        "sugar_g": 0.04,
+        "sodium_mg": 2.2
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "capsicum",
+      "name": "Capsicum",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Capsicum"
+        ],
+        "hinglish": [
+          "shimla mirch",
+          "dhobli mirchi"
+        ],
+        "marathi": [
+          "ढोबळी मिरची",
+          "शिमला मिर्च"
+        ]
+      },
+      "search_terms": [
+        "Capsicum",
+        "shimla mirch",
+        "dhobli mirchi",
+        "ढोबळी मिरची",
+        "शिमला मिर्च"
+      ],
+      "image": {
+        "filename": "Capsicum.png",
+        "path": "images/foods/Capsicum.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 20,
+        "protein_g": 0.9,
+        "carbohydrates_g": 4.6,
+        "fat_g": 0.2,
+        "fiber_g": 1.7,
+        "sugar_g": 2.4,
+        "sodium_mg": 3
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.2,
+        "protein_g": 0.009,
+        "carbohydrates_g": 0.046,
+        "fat_g": 0.002,
+        "fiber_g": 0.017,
+        "sugar_g": 0.024,
+        "sodium_mg": 0.03
+      },
+      "serving_options": [
+        {
+          "label": "1 medium",
+          "weight_g": 120.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "capsicum_sabji",
+      "name": "Capsicum Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Capsicum Sabji"
+        ],
+        "hinglish": [
+          "shimla mirch sabzi"
+        ],
+        "marathi": [
+          "ढोबळी मिरचीची भाजी"
+        ]
+      },
+      "search_terms": [
+        "Capsicum Sabji",
+        "shimla mirch sabzi",
+        "ढोबळी मिरचीची भाजी"
+      ],
+      "image": {
+        "filename": "Capsicum Sabji.png",
+        "path": "images/foods/Capsicum Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 90,
+        "protein_g": 2,
+        "carbohydrates_g": 8,
+        "fat_g": 5,
+        "fiber_g": 2.5,
+        "sugar_g": 3,
+        "sodium_mg": 220
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.9,
+        "protein_g": 0.02,
+        "carbohydrates_g": 0.08,
+        "fat_g": 0.05,
+        "fiber_g": 0.025,
+        "sugar_g": 0.03,
+        "sodium_mg": 2.2
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "bhindi",
+      "name": "Lady Finger / Bhindi",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Lady Finger / Bhindi"
+        ],
+        "hinglish": [
+          "bhendi",
+          "bhindi",
+          "okra",
+          "lady finger"
+        ],
+        "marathi": [
+          "भेंडी",
+          "भिंडी"
+        ]
+      },
+      "search_terms": [
+        "Lady Finger / Bhindi",
+        "bhendi",
+        "bhindi",
+        "okra",
+        "lady finger",
+        "भेंडी",
+        "भिंडी"
+      ],
+      "image": {
+        "filename": "Lady Finger-Bhindi.png",
+        "path": "images/foods/Lady Finger-Bhindi.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 33,
+        "protein_g": 1.9,
+        "carbohydrates_g": 7.5,
+        "fat_g": 0.2,
+        "fiber_g": 3.2,
+        "sugar_g": 1.5,
+        "sodium_mg": 7
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.33,
+        "protein_g": 0.019,
+        "carbohydrates_g": 0.075,
+        "fat_g": 0.002,
+        "fiber_g": 0.032,
+        "sugar_g": 0.015,
+        "sodium_mg": 0.07
+      },
+      "serving_options": [
+        {
+          "label": "1 cup",
+          "weight_g": 100.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "bhindi_sabji",
+      "name": "Lady Finger / Bhindi Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Lady Finger / Bhindi Sabji"
+        ],
+        "hinglish": [
+          "bhindi sabji",
+          "bhendi bhaji",
+          "okra sabzi"
+        ],
+        "marathi": [
+          "भेंडीची भाजी",
+          "भिंडी की सब्जी"
+        ]
+      },
+      "search_terms": [
+        "Lady Finger / Bhindi Sabji",
+        "bhindi sabji",
+        "bhendi bhaji",
+        "okra sabzi",
+        "भेंडीची भाजी",
+        "भिंडी की सब्जी"
+      ],
+      "image": {
+        "filename": "Lady Finger-Bhindi Sabji.png",
+        "path": "images/foods/Lady Finger-Bhindi Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 110,
+        "protein_g": 2.2,
+        "carbohydrates_g": 10,
+        "fat_g": 6,
+        "fiber_g": 3.5,
+        "sugar_g": 3,
+        "sodium_mg": 250
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.1,
+        "protein_g": 0.022,
+        "carbohydrates_g": 0.1,
+        "fat_g": 0.06,
+        "fiber_g": 0.035,
+        "sugar_g": 0.03,
+        "sodium_mg": 2.5
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "brinjal",
+      "name": "Brinjal / Eggplant",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Brinjal / Eggplant"
+        ],
+        "hinglish": [
+          "vangi",
+          "baingan",
+          "brinjal",
+          "eggplant"
+        ],
+        "marathi": [
+          "वांगी",
+          "बैंगन"
+        ]
+      },
+      "search_terms": [
+        "Brinjal / Eggplant",
+        "vangi",
+        "baingan",
+        "brinjal",
+        "eggplant",
+        "वांगी",
+        "बैंगन"
+      ],
+      "image": {
+        "filename": "Brinjal.png",
+        "path": "images/foods/Brinjal.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 25,
+        "protein_g": 1,
+        "carbohydrates_g": 5.9,
+        "fat_g": 0.2,
+        "fiber_g": 3,
+        "sugar_g": 3.5,
+        "sodium_mg": 2
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.25,
+        "protein_g": 0.01,
+        "carbohydrates_g": 0.059,
+        "fat_g": 0.002,
+        "fiber_g": 0.03,
+        "sugar_g": 0.035,
+        "sodium_mg": 0.02
+      },
+      "serving_options": [
+        {
+          "label": "1 cup",
+          "weight_g": 100.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "brinjal_sabji",
+      "name": "Brinjal Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Brinjal Sabji"
+        ],
+        "hinglish": [
+          "vangi bhaji"
+        ],
+        "marathi": [
+          "बैंगन की सब्जी",
+          "वांग्याची भाजी"
+        ]
+      },
+      "search_terms": [
+        "Brinjal Sabji",
+        "vangi bhaji",
+        "बैंगन की सब्जी",
+        "वांग्याची भाजी"
+      ],
+      "image": {
+        "filename": "Brinjal Sabji.png",
+        "path": "images/foods/Brinjal Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 100,
+        "protein_g": 2,
+        "carbohydrates_g": 9,
+        "fat_g": 6,
+        "fiber_g": 3,
+        "sugar_g": 3,
+        "sodium_mg": 220
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.0,
+        "protein_g": 0.02,
+        "carbohydrates_g": 0.09,
+        "fat_g": 0.06,
+        "fiber_g": 0.03,
+        "sugar_g": 0.03,
+        "sodium_mg": 2.2
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "bottle_gourd",
+      "name": "Bottle Gourd / Lauki",
+      "category": "Vegetables",
+      "aliases": {
+        "english": [
+          "Bottle Gourd / Lauki"
+        ],
+        "hinglish": [
+          "dudhi",
+          "lauki",
+          "bottle gourd",
+          "dudhi bhopla",
+          "ghiya"
+        ],
+        "marathi": [
+          "दुधी भोपळा",
+          "लौकी"
+        ]
+      },
+      "search_terms": [
+        "Bottle Gourd / Lauki",
+        "dudhi",
+        "lauki",
+        "bottle gourd",
+        "dudhi bhopla",
+        "ghiya",
+        "दुधी भोपळा",
+        "लौकी"
+      ],
+      "image": {
+        "filename": "Bottle Gourd-Lauki.png",
+        "path": "images/foods/Bottle Gourd-Lauki.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 14,
+        "protein_g": 0.6,
+        "carbohydrates_g": 3.4,
+        "fat_g": 0.1,
+        "fiber_g": 1.2,
+        "sugar_g": 2.5,
+        "sodium_mg": 2
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.14,
+        "protein_g": 0.006,
+        "carbohydrates_g": 0.034,
+        "fat_g": 0.001,
+        "fiber_g": 0.012,
+        "sugar_g": 0.025,
+        "sodium_mg": 0.02
+      },
+      "serving_options": [
+        {
+          "label": "1 cup",
+          "weight_g": 100.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "bottle_gourd_sabji",
+      "name": "Bottle Gourd / Lauki Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Bottle Gourd / Lauki Sabji"
+        ],
+        "hinglish": [
+          "dudhi bhaji",
+          "lauki sabzi"
+        ],
+        "marathi": [
+          "दुधीची भाजी",
+          "लौकी की सब्जी"
+        ]
+      },
+      "search_terms": [
+        "Bottle Gourd / Lauki Sabji",
+        "dudhi bhaji",
+        "lauki sabzi",
+        "दुधीची भाजी",
+        "लौकी की सब्जी"
+      ],
+      "image": {
+        "filename": "Bottle Gourd-Lauki Sabji.png",
+        "path": "images/foods/Bottle Gourd-Lauki Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 55,
+        "protein_g": 1.2,
+        "carbohydrates_g": 6,
+        "fat_g": 2.5,
+        "fiber_g": 1.5,
+        "sugar_g": 2.5,
+        "sodium_mg": 180
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.55,
+        "protein_g": 0.012,
+        "carbohydrates_g": 0.06,
+        "fat_g": 0.025,
+        "fiber_g": 0.015,
+        "sugar_g": 0.025,
+        "sodium_mg": 1.8
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "almonds",
+      "name": "Almonds",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Almonds"
+        ],
+        "hinglish": [
+          "badam",
+          "almond"
+        ],
+        "marathi": [
+          "बदाम",
+          "बादाम"
+        ]
+      },
+      "search_terms": [
+        "Almonds",
+        "badam",
+        "almond",
+        "बदाम",
+        "बादाम"
+      ],
+      "image": {
+        "filename": "Almonds.png",
+        "path": "images/foods/Almonds.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 579,
+        "protein_g": 21.2,
+        "carbohydrates_g": 21.6,
+        "fat_g": 49.9,
+        "fiber_g": 12.5,
+        "sugar_g": 4.4,
+        "sodium_mg": 1
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 5.79,
+        "protein_g": 0.212,
+        "carbohydrates_g": 0.216,
+        "fat_g": 0.499,
+        "fiber_g": 0.125,
+        "sugar_g": 0.044,
+        "sodium_mg": 0.01
+      },
+      "serving_options": [
+        {
+          "label": "1 almond",
+          "weight_g": 1.2
+        },
+        {
+          "label": "5 almonds",
+          "weight_g": 6.0
+        },
+        {
+          "label": "10 almonds",
+          "weight_g": 12.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "cashews",
+      "name": "Cashews",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Cashews"
+        ],
+        "hinglish": [
+          "kaju",
+          "cashew"
+        ],
+        "marathi": [
+          "काजू"
+        ]
+      },
+      "search_terms": [
+        "Cashews",
+        "kaju",
+        "cashew",
+        "काजू"
+      ],
+      "image": {
+        "filename": "Cashews.png",
+        "path": "images/foods/Cashews.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 553,
+        "protein_g": 18.2,
+        "carbohydrates_g": 30.2,
+        "fat_g": 43.9,
+        "fiber_g": 3.3,
+        "sugar_g": 5.9,
+        "sodium_mg": 12
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 5.53,
+        "protein_g": 0.182,
+        "carbohydrates_g": 0.302,
+        "fat_g": 0.439,
+        "fiber_g": 0.033,
+        "sugar_g": 0.059,
+        "sodium_mg": 0.12
+      },
+      "serving_options": [
+        {
+          "label": "1 cashew",
+          "weight_g": 1.6
+        },
+        {
+          "label": "10 cashews",
+          "weight_g": 16.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "walnuts",
+      "name": "Walnuts",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Walnuts"
+        ],
+        "hinglish": [
+          "akhrot",
+          "walnut"
+        ],
+        "marathi": [
+          "अक्रोड",
+          "अखरोट"
+        ]
+      },
+      "search_terms": [
+        "Walnuts",
+        "akhrot",
+        "walnut",
+        "अक्रोड",
+        "अखरोट"
+      ],
+      "image": {
+        "filename": "Walnuts.png",
+        "path": "images/foods/Walnuts.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 654,
+        "protein_g": 15.2,
+        "carbohydrates_g": 13.7,
+        "fat_g": 65.2,
+        "fiber_g": 6.7,
+        "sugar_g": 2.6,
+        "sodium_mg": 2
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 6.54,
+        "protein_g": 0.152,
+        "carbohydrates_g": 0.137,
+        "fat_g": 0.652,
+        "fiber_g": 0.067,
+        "sugar_g": 0.026,
+        "sodium_mg": 0.02
+      },
+      "serving_options": [
+        {
+          "label": "1 walnut kernel",
+          "weight_g": 4.0
+        },
+        {
+          "label": "5 kernels",
+          "weight_g": 20.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Peanuts"
+        ],
+        "hinglish": [
+          "shengdana",
+          "moongfali",
+          "sing",
+          "peanut",
+          "groundnut"
+        ],
+        "marathi": [
+          "शेंगदाणे",
+          "मूंगफली"
+        ]
+      },
+      "search_terms": [
+        "Peanuts",
+        "shengdana",
+        "moongfali",
+        "sing",
+        "peanut",
+        "groundnut",
+        "शेंगदाणे",
+        "मूंगफली"
+      ],
+      "image": {
+        "filename": "Peanuts.png",
+        "path": "images/foods/Peanuts.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 567,
+        "protein_g": 25.8,
+        "carbohydrates_g": 16.1,
+        "fat_g": 49.2,
+        "fiber_g": 8.5,
+        "sugar_g": 4.7,
+        "sodium_mg": 18
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 5.67,
+        "protein_g": 0.258,
+        "carbohydrates_g": 0.161,
+        "fat_g": 0.492,
+        "fiber_g": 0.085,
+        "sugar_g": 0.047,
+        "sodium_mg": 0.18
+      },
+      "serving_options": [
+        {
+          "label": "1 tbsp",
+          "weight_g": 15.0
+        },
+        {
+          "label": "small handful",
+          "weight_g": 30.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "pistachios",
+      "name": "Pistachios",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Pistachios"
+        ],
+        "hinglish": [
+          "pista",
+          "pistachio"
+        ],
+        "marathi": [
+          "पिस्ता"
+        ]
+      },
+      "search_terms": [
+        "Pistachios",
+        "pista",
+        "pistachio",
+        "पिस्ता"
+      ],
+      "image": {
+        "filename": "Pistachios.png",
+        "path": "images/foods/Pistachios.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 562,
+        "protein_g": 20.2,
+        "carbohydrates_g": 27.2,
+        "fat_g": 45.3,
+        "fiber_g": 10.6,
+        "sugar_g": 7.7,
+        "sodium_mg": 1
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 5.62,
+        "protein_g": 0.202,
+        "carbohydrates_g": 0.272,
+        "fat_g": 0.453,
+        "fiber_g": 0.106,
+        "sugar_g": 0.077,
+        "sodium_mg": 0.01
+      },
+      "serving_options": [
+        {
+          "label": "1 pistachio kernel",
+          "weight_g": 0.6
+        },
+        {
+          "label": "20 kernels",
+          "weight_g": 12.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "chia_seeds",
+      "name": "Chia Seeds",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Chia Seeds"
+        ],
+        "hinglish": [
+          "chia"
+        ],
+        "marathi": [
+          "चिया सीड्स"
+        ]
+      },
+      "search_terms": [
+        "Chia Seeds",
+        "chia",
+        "चिया सीड्स"
+      ],
+      "image": {
+        "filename": "Chia Seeds.png",
+        "path": "images/foods/Chia Seeds.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 486,
+        "protein_g": 16.5,
+        "carbohydrates_g": 42.1,
+        "fat_g": 30.7,
+        "fiber_g": 34.4,
+        "sugar_g": 0,
+        "sodium_mg": 16
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 4.86,
+        "protein_g": 0.165,
+        "carbohydrates_g": 0.421,
+        "fat_g": 0.307,
+        "fiber_g": 0.344,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.16
+      },
+      "serving_options": [
+        {
+          "label": "1 tbsp",
+          "weight_g": 12.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "flax_seeds",
+      "name": "Flax Seeds",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Flax Seeds"
+        ],
+        "hinglish": [
+          "alsi",
+          "alshi",
+          "flaxseed"
+        ],
+        "marathi": [
+          "जवस",
+          "अळशी",
+          "अलसी"
+        ]
+      },
+      "search_terms": [
+        "Flax Seeds",
+        "alsi",
+        "alshi",
+        "flaxseed",
+        "जवस",
+        "अळशी",
+        "अलसी"
+      ],
+      "image": {
+        "filename": "Flax Seeds.png",
+        "path": "images/foods/Flax Seeds.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 534,
+        "protein_g": 18.3,
+        "carbohydrates_g": 28.9,
+        "fat_g": 42.2,
+        "fiber_g": 27.3,
+        "sugar_g": 1.6,
+        "sodium_mg": 30
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 5.34,
+        "protein_g": 0.183,
+        "carbohydrates_g": 0.289,
+        "fat_g": 0.422,
+        "fiber_g": 0.273,
+        "sugar_g": 0.016,
+        "sodium_mg": 0.3
+      },
+      "serving_options": [
+        {
+          "label": "1 tbsp",
+          "weight_g": 10.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "pumpkin_seeds",
+      "name": "Pumpkin Seeds",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Pumpkin Seeds"
+        ],
+        "hinglish": [
+          "kaddu ke beej"
+        ],
+        "marathi": [
+          "भोपळ्याच्या बिया",
+          "कद्दू के बीज"
+        ]
+      },
+      "search_terms": [
+        "Pumpkin Seeds",
+        "kaddu ke beej",
+        "भोपळ्याच्या बिया",
+        "कद्दू के बीज"
+      ],
+      "image": {
+        "filename": "Pumpkin Seeds.png",
+        "path": "images/foods/Pumpkin Seeds.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 559,
+        "protein_g": 30.2,
+        "carbohydrates_g": 10.7,
+        "fat_g": 49.1,
+        "fiber_g": 6,
+        "sugar_g": 1.4,
+        "sodium_mg": 7
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 5.59,
+        "protein_g": 0.302,
+        "carbohydrates_g": 0.107,
+        "fat_g": 0.491,
+        "fiber_g": 0.06,
+        "sugar_g": 0.014,
+        "sodium_mg": 0.07
+      },
+      "serving_options": [
+        {
+          "label": "1 tbsp",
+          "weight_g": 10.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "sunflower_seeds",
+      "name": "Sunflower Seeds",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Sunflower Seeds"
+        ],
+        "hinglish": [
+          "surajmukhi seeds"
+        ],
+        "marathi": [
+          "सूर्यफुलाच्या बिया",
+          "सूरजमुखी के बीज"
+        ]
+      },
+      "search_terms": [
+        "Sunflower Seeds",
+        "surajmukhi seeds",
+        "सूर्यफुलाच्या बिया",
+        "सूरजमुखी के बीज"
+      ],
+      "image": {
+        "filename": "Sunflower Seeds.png",
+        "path": "images/foods/Sunflower Seeds.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 584,
+        "protein_g": 20.8,
+        "carbohydrates_g": 20,
+        "fat_g": 51.5,
+        "fiber_g": 8.6,
+        "sugar_g": 2.6,
+        "sodium_mg": 9
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 5.84,
+        "protein_g": 0.208,
+        "carbohydrates_g": 0.2,
+        "fat_g": 0.515,
+        "fiber_g": 0.086,
+        "sugar_g": 0.026,
+        "sodium_mg": 0.09
+      },
+      "serving_options": [
+        {
+          "label": "1 tbsp",
+          "weight_g": 10.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "sesame_seeds",
+      "name": "Sesame Seeds",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Sesame Seeds"
+        ],
+        "hinglish": [
+          "til",
+          "sesame"
+        ],
+        "marathi": [
+          "तीळ",
+          "तिल"
+        ]
+      },
+      "search_terms": [
+        "Sesame Seeds",
+        "til",
+        "sesame",
+        "तीळ",
+        "तिल"
+      ],
+      "image": {
+        "filename": "Sesame Seeds.png",
+        "path": "images/foods/Sesame Seeds.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 573,
+        "protein_g": 17.7,
+        "carbohydrates_g": 23.4,
+        "fat_g": 49.7,
+        "fiber_g": 11.8,
+        "sugar_g": 0.3,
+        "sodium_mg": 11
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 5.73,
+        "protein_g": 0.177,
+        "carbohydrates_g": 0.234,
+        "fat_g": 0.497,
+        "fiber_g": 0.118,
+        "sugar_g": 0.003,
+        "sodium_mg": 0.11
+      },
+      "serving_options": [
+        {
+          "label": "1 tbsp",
+          "weight_g": 9.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "mixed_nuts",
+      "name": "Mixed Nuts",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Mixed Nuts"
+        ],
+        "hinglish": [
+          "dry fruit mix",
+          "mix nuts"
+        ],
+        "marathi": [
+          "मिक्स ड्रायफ्रूट"
+        ]
+      },
+      "search_terms": [
+        "Mixed Nuts",
+        "dry fruit mix",
+        "mix nuts",
+        "मिक्स ड्रायफ्रूट"
+      ],
+      "image": {
+        "filename": "Mixed Nuts.png",
+        "path": "images/foods/Mixed Nuts.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 600,
+        "protein_g": 20,
+        "carbohydrates_g": 25,
+        "fat_g": 52,
+        "fiber_g": 9,
+        "sugar_g": 7,
+        "sodium_mg": 100
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 6.0,
+        "protein_g": 0.2,
+        "carbohydrates_g": 0.25,
+        "fat_g": 0.52,
+        "fiber_g": 0.09,
+        "sugar_g": 0.07,
+        "sodium_mg": 1.0
+      },
+      "serving_options": [
+        {
+          "label": "1 handful",
+          "weight_g": 30.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "watermelon_seeds",
+      "name": "Watermelon Seeds",
+      "category": "Nuts & Seeds",
+      "aliases": {
+        "english": [
+          "Watermelon Seeds"
+        ],
+        "hinglish": [
+          "tarbooj seeds"
+        ],
+        "marathi": [
+          "कलिंगडाच्या बिया",
+          "तरबूज के बीज"
+        ]
+      },
+      "search_terms": [
+        "Watermelon Seeds",
+        "tarbooj seeds",
+        "कलिंगडाच्या बिया",
+        "तरबूज के बीज"
+      ],
+      "image": {
+        "filename": "Watermelon Seeds.png",
+        "path": "images/foods/Watermelon Seeds.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dry",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 557,
+        "protein_g": 28.3,
+        "carbohydrates_g": 15.3,
+        "fat_g": 47.4,
+        "fiber_g": 4.5,
+        "sugar_g": 0,
+        "sodium_mg": 10
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 5.57,
+        "protein_g": 0.283,
+        "carbohydrates_g": 0.153,
+        "fat_g": 0.474,
+        "fiber_g": 0.045,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.1
+      },
+      "serving_options": [
+        {
+          "label": "1 tbsp",
+          "weight_g": 10.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "raisins",
+      "name": "Raisins",
+      "category": "Dry Fruits",
+      "aliases": {
+        "english": [
+          "Raisins"
+        ],
+        "hinglish": [
+          "kishmish",
+          "manuka"
+        ],
+        "marathi": [
+          "मनुका",
+          "किशमिश"
+        ]
+      },
+      "search_terms": [
+        "Raisins",
+        "kishmish",
+        "manuka",
+        "मनुका",
+        "किशमिश"
+      ],
+      "image": {
+        "filename": "Raisins.png",
+        "path": "images/foods/Raisins.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dried",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 299,
+        "protein_g": 3.1,
+        "carbohydrates_g": 79.2,
+        "fat_g": 0.5,
+        "fiber_g": 3.7,
+        "sugar_g": 59.2,
+        "sodium_mg": 11
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 2.99,
+        "protein_g": 0.031,
+        "carbohydrates_g": 0.792,
+        "fat_g": 0.005,
+        "fiber_g": 0.037,
+        "sugar_g": 0.592,
+        "sodium_mg": 0.11
+      },
+      "serving_options": [
+        {
+          "label": "1 tbsp",
+          "weight_g": 10.0
+        },
+        {
+          "label": "small handful",
+          "weight_g": 30.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "dates_brown",
+      "name": "Dates (Brown)",
+      "category": "Dry Fruits",
+      "aliases": {
+        "english": [
+          "Dates (Brown)"
+        ],
+        "hinglish": [
+          "khajoor",
+          "khajur",
+          "dates",
+          "brown dates"
+        ],
+        "marathi": [
+          "खजूर",
+          "खारीक (not same as dried date)"
+        ]
+      },
+      "search_terms": [
+        "Dates (Brown)",
+        "khajoor",
+        "khajur",
+        "dates",
+        "brown dates",
+        "खजूर",
+        "खारीक (not same as dried date)"
+      ],
+      "image": {
+        "filename": "Dates Brown.png",
+        "path": "images/foods/Dates Brown.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dried",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 282,
+        "protein_g": 2.5,
+        "carbohydrates_g": 75,
+        "fat_g": 0.4,
+        "fiber_g": 8,
+        "sugar_g": 63.4,
+        "sodium_mg": 2
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 2.82,
+        "protein_g": 0.025,
+        "carbohydrates_g": 0.75,
+        "fat_g": 0.004,
+        "fiber_g": 0.08,
+        "sugar_g": 0.634,
+        "sodium_mg": 0.02
+      },
+      "serving_options": [
+        {
+          "label": "1 date",
+          "weight_g": 8.0
+        },
+        {
+          "label": "2 dates",
+          "weight_g": 16.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "dates_black",
+      "name": "Dates (Black)",
+      "category": "Dry Fruits",
+      "aliases": {
+        "english": [
+          "Dates (Black)"
+        ],
+        "hinglish": [
+          "black dates",
+          "black khajoor"
+        ],
+        "marathi": [
+          "काळे खजूर"
+        ]
+      },
+      "search_terms": [
+        "Dates (Black)",
+        "black dates",
+        "black khajoor",
+        "काळे खजूर"
+      ],
+      "image": {
+        "filename": "Dates Black.png",
+        "path": "images/foods/Dates Black.png",
+        "matched_in_zip": true
+      },
+      "food_state": "dried",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 282,
+        "protein_g": 2.5,
+        "carbohydrates_g": 75,
+        "fat_g": 0.4,
+        "fiber_g": 8,
+        "sugar_g": 63.4,
+        "sodium_mg": 2
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 2.82,
+        "protein_g": 0.025,
+        "carbohydrates_g": 0.75,
+        "fat_g": 0.004,
+        "fiber_g": 0.08,
+        "sugar_g": 0.634,
+        "sodium_mg": 0.02
+      },
+      "serving_options": [
+        {
+          "label": "1 date",
+          "weight_g": 8.0
+        },
+        {
+          "label": "2 dates",
+          "weight_g": 16.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "khichdi",
+      "name": "Vegetable Khichdi",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Vegetable Khichdi"
+        ],
+        "hinglish": [
+          "khichadi",
+          "khichdi",
+          "khichdi bhat"
+        ],
+        "marathi": [
+          "खिचडी",
+          "खिचड़ी"
+        ]
+      },
+      "search_terms": [
+        "Vegetable Khichdi",
+        "khichadi",
+        "khichdi",
+        "khichdi bhat",
+        "खिचडी",
+        "खिचड़ी"
+      ],
+      "image": {
+        "filename": "Vegetable Khichdi.png",
+        "path": "images/foods/Vegetable Khichdi.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 120,
+        "protein_g": 4,
+        "carbohydrates_g": 20,
+        "fat_g": 2.5,
+        "fiber_g": 2.5,
+        "sugar_g": 1,
+        "sodium_mg": 250
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.2,
+        "protein_g": 0.04,
+        "carbohydrates_g": 0.2,
+        "fat_g": 0.025,
+        "fiber_g": 0.025,
+        "sugar_g": 0.01,
+        "sodium_mg": 2.5
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 200.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "dal_rice",
+      "name": "Dal Rice",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Dal Rice"
+        ],
+        "hinglish": [
+          "varan bhat",
+          "dal chawal",
+          "daal bhaat"
+        ],
+        "marathi": [
+          "वरण भात",
+          "डाळ भात",
+          "दाल चावल"
+        ]
+      },
+      "search_terms": [
+        "Dal Rice",
+        "varan bhat",
+        "dal chawal",
+        "daal bhaat",
+        "वरण भात",
+        "डाळ भात",
+        "दाल चावल"
+      ],
+      "image": {
+        "filename": "Dal Rice.png",
+        "path": "images/foods/Dal Rice.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 130,
+        "protein_g": 4.5,
+        "carbohydrates_g": 22,
+        "fat_g": 2.5,
+        "fiber_g": 2,
+        "sugar_g": 1,
+        "sodium_mg": 250
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.3,
+        "protein_g": 0.045,
+        "carbohydrates_g": 0.22,
+        "fat_g": 0.025,
+        "fiber_g": 0.02,
+        "sugar_g": 0.01,
+        "sodium_mg": 2.5
+      },
+      "serving_options": [
+        {
+          "label": "1 plate",
+          "weight_g": 300.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "plain_dal",
+      "name": "Plain Cooked Dal",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Plain Cooked Dal"
+        ],
+        "hinglish": [
+          "varan",
+          "dal",
+          "cooked dal",
+          "plain dal",
+          "amti (recipe differs)"
+        ],
+        "marathi": [
+          "डाळ",
+          "वरण",
+          "दाल"
+        ]
+      },
+      "search_terms": [
+        "Plain Cooked Dal",
+        "varan",
+        "dal",
+        "cooked dal",
+        "plain dal",
+        "amti (recipe differs)",
+        "डाळ",
+        "वरण",
+        "दाल"
+      ],
+      "image": {
+        "filename": "Plain Cooked Dal.png",
+        "path": "images/foods/Plain Cooked Dal.png",
+        "matched_in_zip": true
+      },
+      "food_state": "prepared_recipe",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 110,
+        "protein_g": 6,
+        "carbohydrates_g": 17,
+        "fat_g": 2,
+        "fiber_g": 4,
+        "sugar_g": 1,
+        "sodium_mg": 250
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.1,
+        "protein_g": 0.06,
+        "carbohydrates_g": 0.17,
+        "fat_g": 0.02,
+        "fiber_g": 0.04,
+        "sugar_g": 0.01,
+        "sodium_mg": 2.5
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "chicken_curry",
+      "name": "Chicken Curry",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Chicken Curry"
+        ],
+        "hinglish": [
+          "chicken rassa",
+          "kombdi rassa"
+        ],
+        "marathi": [
+          "कोंबडी रस्सा",
+          "चिकन करी"
+        ]
+      },
+      "search_terms": [
+        "Chicken Curry",
+        "chicken rassa",
+        "kombdi rassa",
+        "कोंबडी रस्सा",
+        "चिकन करी"
+      ],
+      "image": {
+        "filename": "Chicken Curry.png",
+        "path": "images/foods/Chicken Curry.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 160,
+        "protein_g": 14,
+        "carbohydrates_g": 5,
+        "fat_g": 9,
+        "fiber_g": 1,
+        "sugar_g": 2,
+        "sodium_mg": 350
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.6,
+        "protein_g": 0.14,
+        "carbohydrates_g": 0.05,
+        "fat_g": 0.09,
+        "fiber_g": 0.01,
+        "sugar_g": 0.02,
+        "sodium_mg": 3.5
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 200.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "vegetable_pulao",
+      "name": "Vegetable Pulao",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Vegetable Pulao"
+        ],
+        "hinglish": [
+          "veg pulao",
+          "pulao",
+          "pulav"
+        ],
+        "marathi": [
+          "पुलाव",
+          "पुलाव भात"
+        ]
+      },
+      "search_terms": [
+        "Vegetable Pulao",
+        "veg pulao",
+        "pulao",
+        "pulav",
+        "पुलाव",
+        "पुलाव भात"
+      ],
+      "image": {
+        "filename": "Vegetable Pulao.png",
+        "path": "images/foods/Vegetable Pulao.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 150,
+        "protein_g": 3.5,
+        "carbohydrates_g": 25,
+        "fat_g": 4,
+        "fiber_g": 1.5,
+        "sugar_g": 2,
+        "sodium_mg": 250
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.5,
+        "protein_g": 0.035,
+        "carbohydrates_g": 0.25,
+        "fat_g": 0.04,
+        "fiber_g": 0.015,
+        "sugar_g": 0.02,
+        "sodium_mg": 2.5
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 180.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "chicken_biryani",
+      "name": "Chicken Biryani",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Chicken Biryani"
+        ],
+        "hinglish": [
+          "biriyani",
+          "chicken biryani rice"
+        ],
+        "marathi": [
+          "चिकन बिर्याणी",
+          "चिकन बिरयानी"
+        ]
+      },
+      "search_terms": [
+        "Chicken Biryani",
+        "biriyani",
+        "chicken biryani rice",
+        "चिकन बिर्याणी",
+        "चिकन बिरयानी"
+      ],
+      "image": {
+        "filename": "Chicken Biryani.png",
+        "path": "images/foods/Chicken Biryani.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 180,
+        "protein_g": 9,
+        "carbohydrates_g": 22,
+        "fat_g": 6,
+        "fiber_g": 1,
+        "sugar_g": 1,
+        "sodium_mg": 350
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.8,
+        "protein_g": 0.09,
+        "carbohydrates_g": 0.22,
+        "fat_g": 0.06,
+        "fiber_g": 0.01,
+        "sugar_g": 0.01,
+        "sodium_mg": 3.5
+      },
+      "serving_options": [
+        {
+          "label": "1 plate",
+          "weight_g": 300.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "sprouts_salad",
+      "name": "Sprouts Salad",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Sprouts Salad"
+        ],
+        "hinglish": [
+          "moong sprouts",
+          "usal sprouts"
+        ],
+        "marathi": [
+          "मोड आलेले मूग",
+          "अंकुरित मूंग"
+        ]
+      },
+      "search_terms": [
+        "Sprouts Salad",
+        "moong sprouts",
+        "usal sprouts",
+        "मोड आलेले मूग",
+        "अंकुरित मूंग"
+      ],
+      "image": {
+        "filename": "Sprouts Salad.png",
+        "path": "images/foods/Sprouts Salad.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 75,
+        "protein_g": 5,
+        "carbohydrates_g": 12,
+        "fat_g": 0.8,
+        "fiber_g": 4,
+        "sugar_g": 2,
+        "sodium_mg": 30
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.75,
+        "protein_g": 0.05,
+        "carbohydrates_g": 0.12,
+        "fat_g": 0.008,
+        "fiber_g": 0.04,
+        "sugar_g": 0.02,
+        "sodium_mg": 0.3
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "besan_chilla",
+      "name": "Besan Chilla",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Besan Chilla"
+        ],
+        "hinglish": [
+          "pudla",
+          "dhirde",
+          "besan cheela"
+        ],
+        "marathi": [
+          "धिरडे",
+          "बेसन चीला"
+        ]
+      },
+      "search_terms": [
+        "Besan Chilla",
+        "pudla",
+        "dhirde",
+        "besan cheela",
+        "धिरडे",
+        "बेसन चीला"
+      ],
+      "image": {
+        "filename": "Besan Chilla.png",
+        "path": "images/foods/Besan Chilla.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 190,
+        "protein_g": 8,
+        "carbohydrates_g": 22,
+        "fat_g": 8,
+        "fiber_g": 4,
+        "sugar_g": 2,
+        "sodium_mg": 300
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.9,
+        "protein_g": 0.08,
+        "carbohydrates_g": 0.22,
+        "fat_g": 0.08,
+        "fiber_g": 0.04,
+        "sugar_g": 0.02,
+        "sodium_mg": 3.0
+      },
+      "serving_options": [
+        {
+          "label": "1 medium chilla",
+          "weight_g": 80.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "poha",
+      "name": "Poha",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Poha"
+        ],
+        "hinglish": [
+          "kanda poha",
+          "kande pohe",
+          "batata poha"
+        ],
+        "marathi": [
+          "कांदे पोहे",
+          "पोहा",
+          "कांदा पोहा"
+        ]
+      },
+      "search_terms": [
+        "Poha",
+        "kanda poha",
+        "kande pohe",
+        "batata poha",
+        "कांदे पोहे",
+        "पोहा",
+        "कांदा पोहा"
+      ],
+      "image": {
+        "filename": "Poha.png",
+        "path": "images/foods/Poha.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 150,
+        "protein_g": 3,
+        "carbohydrates_g": 25,
+        "fat_g": 4,
+        "fiber_g": 1.5,
+        "sugar_g": 2,
+        "sodium_mg": 250
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.5,
+        "protein_g": 0.03,
+        "carbohydrates_g": 0.25,
+        "fat_g": 0.04,
+        "fiber_g": 0.015,
+        "sugar_g": 0.02,
+        "sodium_mg": 2.5
+      },
+      "serving_options": [
+        {
+          "label": "1 plate",
+          "weight_g": 200.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "idli_sambar",
+      "name": "Idli Sambar",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Idli Sambar"
+        ],
+        "hinglish": [
+          "idli-sambar"
+        ],
+        "marathi": [
+          "इडली सांबार",
+          "इडली सांभर"
+        ]
+      },
+      "search_terms": [
+        "Idli Sambar",
+        "idli-sambar",
+        "इडली सांबार",
+        "इडली सांभर"
+      ],
+      "image": {
+        "filename": "Idli Sambar.png",
+        "path": "images/foods/Idli Sambar.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 120,
+        "protein_g": 4,
+        "carbohydrates_g": 22,
+        "fat_g": 1.5,
+        "fiber_g": 2,
+        "sugar_g": 1,
+        "sodium_mg": 300
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.2,
+        "protein_g": 0.04,
+        "carbohydrates_g": 0.22,
+        "fat_g": 0.015,
+        "fiber_g": 0.02,
+        "sugar_g": 0.01,
+        "sodium_mg": 3.0
+      },
+      "serving_options": [
+        {
+          "label": "2 idli + sambar",
+          "weight_g": 200.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "plain_dosa",
+      "name": "Plain Dosa",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Plain Dosa"
+        ],
+        "hinglish": [
+          "sada dosa",
+          "dosa"
+        ],
+        "marathi": [
+          "सादा डोसा",
+          "डोसा"
+        ]
+      },
+      "search_terms": [
+        "Plain Dosa",
+        "sada dosa",
+        "dosa",
+        "सादा डोसा",
+        "डोसा"
+      ],
+      "image": {
+        "filename": "Plain Dosa.png",
+        "path": "images/foods/Plain Dosa.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 168,
+        "protein_g": 4,
+        "carbohydrates_g": 27,
+        "fat_g": 4,
+        "fiber_g": 1,
+        "sugar_g": 1,
+        "sodium_mg": 300
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.68,
+        "protein_g": 0.04,
+        "carbohydrates_g": 0.27,
+        "fat_g": 0.04,
+        "fiber_g": 0.01,
+        "sugar_g": 0.01,
+        "sodium_mg": 3.0
+      },
+      "serving_options": [
+        {
+          "label": "1 medium dosa",
+          "weight_g": 100.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "curd_rice",
+      "name": "Homemade Curd Rice",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Homemade Curd Rice"
+        ],
+        "hinglish": [
+          "dahi chawal",
+          "curd rice",
+          "mosaranna"
+        ],
+        "marathi": [
+          "दही भात",
+          "दही चावल"
+        ]
+      },
+      "search_terms": [
+        "Homemade Curd Rice",
+        "dahi chawal",
+        "curd rice",
+        "mosaranna",
+        "दही भात",
+        "दही चावल"
+      ],
+      "image": {
+        "filename": "Homemade Curd Rice.png",
+        "path": "images/foods/Homemade Curd Rice.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 130,
+        "protein_g": 3.5,
+        "carbohydrates_g": 22,
+        "fat_g": 3,
+        "fiber_g": 0.5,
+        "sugar_g": 2,
+        "sodium_mg": 180
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.3,
+        "protein_g": 0.035,
+        "carbohydrates_g": 0.22,
+        "fat_g": 0.03,
+        "fiber_g": 0.005,
+        "sugar_g": 0.02,
+        "sodium_mg": 1.8
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 200.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "paneer_bhurji",
+      "name": "Paneer Bhurji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Paneer Bhurji"
+        ],
+        "hinglish": [],
+        "marathi": [
+          "पनीर भुर्जी"
+        ]
+      },
+      "search_terms": [
+        "Paneer Bhurji",
+        "पनीर भुर्जी"
+      ],
+      "image": {
+        "filename": "Paneer Bhurji.png",
+        "path": "images/foods/Paneer Bhurji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 190,
+        "protein_g": 12,
+        "carbohydrates_g": 6,
+        "fat_g": 13,
+        "fiber_g": 1,
+        "sugar_g": 3,
+        "sodium_mg": 350
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.9,
+        "protein_g": 0.12,
+        "carbohydrates_g": 0.06,
+        "fat_g": 0.13,
+        "fiber_g": 0.01,
+        "sugar_g": 0.03,
+        "sodium_mg": 3.5
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "paneer_sabji",
+      "name": "Paneer Sabji",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Paneer Sabji"
+        ],
+        "hinglish": [
+          "paneer curry",
+          "paneer gravy"
+        ],
+        "marathi": [
+          "पनीर की सब्जी"
+        ]
+      },
+      "search_terms": [
+        "Paneer Sabji",
+        "paneer curry",
+        "paneer gravy",
+        "पनीर की सब्जी"
+      ],
+      "image": {
+        "filename": "Paneer Sabji.png",
+        "path": "images/foods/Paneer Sabji.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 170,
+        "protein_g": 10,
+        "carbohydrates_g": 8,
+        "fat_g": 11,
+        "fiber_g": 1,
+        "sugar_g": 3,
+        "sodium_mg": 350
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.7,
+        "protein_g": 0.1,
+        "carbohydrates_g": 0.08,
+        "fat_g": 0.11,
+        "fiber_g": 0.01,
+        "sugar_g": 0.03,
+        "sodium_mg": 3.5
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "goat_meat",
+      "name": "Goat Meat / Mutton",
+      "category": "Non-vegetarian",
+      "aliases": {
+        "english": [
+          "Goat Meat / Mutton"
+        ],
+        "hinglish": [
+          "goat meat",
+          "mutton",
+          "bakra meat",
+          "chevon",
+          "bakryache maas"
+        ],
+        "marathi": [
+          "मटण",
+          "मटन"
+        ]
+      },
+      "search_terms": [
+        "Goat Meat / Mutton",
+        "goat meat",
+        "mutton",
+        "bakra meat",
+        "chevon",
+        "bakryache maas",
+        "मटण",
+        "मटन"
+      ],
+      "image": {
+        "filename": "Goat Meat.png",
+        "path": "images/foods/Goat Meat.png",
+        "matched_in_zip": true
+      },
+      "food_state": "raw",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 143,
+        "protein_g": 20.6,
+        "carbohydrates_g": 0,
+        "fat_g": 6.1,
+        "fiber_g": 0,
+        "sugar_g": 0,
+        "sodium_mg": 75
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.43,
+        "protein_g": 0.206,
+        "carbohydrates_g": 0.0,
+        "fat_g": 0.061,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.75
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": false,
+      "is_active": true
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu",
+      "category": "Dairy Alternatives",
+      "aliases": {
+        "english": [
+          "Tofu"
+        ],
+        "hinglish": [
+          "soy paneer"
+        ],
+        "marathi": [
+          "सोया पनीर"
+        ]
+      },
+      "search_terms": [
+        "Tofu",
+        "soy paneer",
+        "सोया पनीर"
+      ],
+      "image": {
+        "filename": "Tofu.png",
+        "path": "images/foods/Tofu.png",
+        "matched_in_zip": true
+      },
+      "food_state": "plain",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 76,
+        "protein_g": 8.1,
+        "carbohydrates_g": 1.9,
+        "fat_g": 4.8,
+        "fiber_g": 0.3,
+        "sugar_g": 0.6,
+        "sodium_mg": 7
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 0.76,
+        "protein_g": 0.081,
+        "carbohydrates_g": 0.019,
+        "fat_g": 0.048,
+        "fiber_g": 0.003,
+        "sugar_g": 0.006,
+        "sodium_mg": 0.07
+      },
+      "serving_options": [
+        {
+          "label": "100 g",
+          "weight_g": null,
+          "requires_user_weight": true
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "provisional_estimate_needs_source_verification",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    },
+    {
+      "id": "palak_paneer",
+      "name": "Palak Paneer",
+      "category": "Indian Meals",
+      "aliases": {
+        "english": [
+          "Palak Paneer"
+        ],
+        "hinglish": [],
+        "marathi": [
+          "पालक पनीर"
+        ]
+      },
+      "search_terms": [
+        "Palak Paneer",
+        "पालक पनीर"
+      ],
+      "image": {
+        "filename": "Palak Paneer.png",
+        "path": "images/foods/Palak Paneer.png",
+        "matched_in_zip": true
+      },
+      "food_state": "recipe_dependent",
+      "nutrition_basis": "per_100_g_edible_portion",
+      "nutrition_per_100g": {
+        "calories_kcal": 150,
+        "protein_g": 8,
+        "carbohydrates_g": 7,
+        "fat_g": 10,
+        "fiber_g": 2,
+        "sugar_g": 2,
+        "sodium_mg": 300
+      },
+      "nutrition_per_gram": {
+        "calories_kcal": 1.5,
+        "protein_g": 0.08,
+        "carbohydrates_g": 0.07,
+        "fat_g": 0.1,
+        "fiber_g": 0.02,
+        "sugar_g": 0.02,
+        "sodium_mg": 3.0
+      },
+      "serving_options": [
+        {
+          "label": "1 katori",
+          "weight_g": 150.0
+        }
+      ],
+      "nutrition_source": {
+        "preferred_reference": "ICMR-NIN Indian Food Composition Tables (IFCT) 2017",
+        "reference_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+        "current_value_status": "recipe_dependent_estimate_needs_recipe_standardization",
+        "notes": "Values in this starter dataset are indicative estimates, not transcribed/verified IFCT laboratory values. Verify against the exact IFCT food code or a standardized recipe before production."
+      },
+      "is_vegetarian": true,
+      "is_active": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "quotes": [
+    { "id": 1, "text": "Small steps every day lead to big changes.", "category": "motivation" },
+    { "id": 2, "text": "Fuel your body, don't just feed it.", "category": "diet" },
+    { "id": 3, "text": "Your only competition is who you were yesterday.", "category": "motivation" },
+    { "id": 4, "text": "Strong body, calm mind.", "category": "fitness" },
+    { "id": 5, "text": "Eat well, move daily, rest deeply.", "category": "lifestyle" },
+    { "id": 6, "text": "Discipline turns goals into results.", "category": "motivation" },
+    { "id": 7, "text": "Progress, not perfection.", "category": "motivation" },
+    { "id": 8, "text": "Healthy food is an investment, not an expense.", "category": "diet" },
+    { "id": 9, "text": "Sweat today, shine tomorrow.", "category": "fitness" },
+    { "id": 10, "text": "You don't have to be extreme, just consistent.", "category": "consistency" },
+    { "id": 11, "text": "Your body hears everything your mind says.", "category": "mindset" },
+    { "id": 12, "text": "Make your plate colorful and your workouts count.", "category": "diet" },
+    { "id": 13, "text": "Start where you are. Use what you have. Do what you can.", "category": "motivation" },
+    { "id": 14, "text": "A healthy habit today is a stronger you tomorrow.", "category": "lifestyle" },
+    { "id": 15, "text": "Train hard, eat smart, recover well.", "category": "fitness" },
+    { "id": 16, "text": "The best workout is the one you actually do.", "category": "fitness" },
+    { "id": 17, "text": "Good nutrition is the foundation of every goal.", "category": "diet" },
+    { "id": 18, "text": "Don't wish for it. Work for it.", "category": "motivation" },
+    { "id": 19, "text": "Every rep brings you closer to your best self.", "category": "fitness" },
+    { "id": 20, "text": "Take care of your body. It's the only place you have to live.", "category": "lifestyle" }
+  ]
+}

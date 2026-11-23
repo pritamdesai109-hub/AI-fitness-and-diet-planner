@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}AI Meal Planner{% endblock %}
+{% block content %}
+<section class="page-heading page-heading-row">
+  <div>
+    <p class="eyebrow">NUTRITION THAT FITS YOU</p>
+    <h1>Your daily meal plan<span class="green-dot">.</span></h1>
+    <p>Personalized for your <strong>{{ profile.get_goal_display|default:"Fitness" }}</strong> goal and <strong>{{ profile.get_dietary_preference_display|default:"Healthy" }}</strong> preference to fulfill your daily nutritional requirements.</p>
+  </div>
+  <a class="button button-outline button-small" href="{% url 'nutrition' %}">Browse foods →</a>
+</section>
+
+<section class="panel dashboard-section meal-planner-panel">
+  <div class="panel-heading">
+    <div>
+      <p class="eyebrow">AI MEAL PLANNER</p>
+      <h2>{{ request.user.first_name|default:request.user.email }}'s suggestions</h2>
+    </div>
+    <div class="meal-meta-pills">
+      <span class="saved-label">{% if saved_plan %}Saved to your progress{% else %}{{ profile.get_dietary_preference_display|default:"Standard Diet" }}{% endif %}</span>
+      {% if profile.get_goal_display %}<span class="goal-pill-tag">{{ profile.get_goal_display }}</span>{% endif %}
+      {% if targets.calories %}<span class="target-requirement-pill">Target: {{ targets.calories }} kcal · {{ targets.protein_g }}g protein</span>{% endif %}
+    </div>
+  </div>
+
+  {% if fallback_note %}<div class="notice notice-fallback" role="status">{{ fallback_note }}</div>{% endif %}
+  {% if error %}<div class="notice notice-error" role="alert">{{ error }}</div>{% endif %}
+
+  {% if plan.meals %}
+    <p class="subtle-text meal-plan-intro">Your daily meal plan fulfills your calorie and protein requirements across Breakfast, Lunch, and Dinner. Suggestions stay planned until you mark them eaten in your tracker.</p>
+    
+    <div class="ai-meal-list">
+      {% for item in plan.meals %}
+        {% if item.food %}
+          <article class="ai-meal-card">
+            <div class="ai-meal-card-heading">
+              <img class="meal-card-gif" src="{% static 'icon/plan.png' %}" alt="" width="36" height="36" loading="lazy">
+              <span class="meal-type-pill">{{ item.meal_type|title }}</span>
+              <a href="{% url 'food_detail' item.food.slug %}">{{ item.food.name }} ↗</a>
+              <span class="meal-portion-badge">{{ item.grams|floatformat:0 }} g</span>
+            </div>
+            <p class="ai-meal-reason">{{ item.reason }}</p>
+            {% if item.nutrients %}
+            <div class="ai-meal-nutrition">
+              <span>{{ item.nutrients.calories|floatformat:0 }} kcal</span>
+              <span>{{ item.nutrients.protein_g|floatformat:1 }} g protein</span>
+              <span>{{ item.nutrients.carbs_g|floatformat:1 }} g carbs</span>
+              <span>{{ item.nutrients.fat_g|floatformat:1 }} g fat</span>
+            </div>
+            {% endif %}
+            {% if not saved_plan.is_added_to_tracker %}
+            <form method="post" class="meal-edit-form">
+              {% csrf_token %}
+              <input type="hidden" name="action" value="update">
+              <input type="hidden" name="index" value="{{ forloop.counter0 }}">
+              <p>
+                <label for="meal-food-{{ forloop.counter }}">Food from catalog</label>
+                <select id="meal-food-{{ forloop.counter }}" name="food_slug" required>
+                  {% for food in foods %}
+                  <option value="{{ food.slug }}"{% if food.slug == item.food_slug %} selected{% endif %}>{{ food.name }}</option>
+                  {% endfor %}
+                </select>
+              </p>
+              <p>
+                <label for="meal-type-{{ forloop.counter }}">Meal</label>
+                <select id="meal-type-{{ forloop.counter }}" name="meal_type" required>
+                  {% for value, label in meal_choices %}
+                  <option value="{{ value }}"{% if value == item.meal_type %} selected{% endif %}>{{ label }}</option>
+                  {% endfor %}
+                </select>
+              </p>
+              <p>
+                <label for="meal-grams-{{ forloop.counter }}">Quantity (g)</label>
+                <input id="meal-grams-{{ forloop.counter }}" name="grams" type="number" min="1" max="10000" step="1" value="{{ item.grams|floatformat:0 }}" required>
+              </p>
+              <button class="button button-small" type="submit">Update suggestion</button>
+            </form>
+            <form method="post" class="meal-remove-form">
+              {% csrf_token %}
+              <input type="hidden" name="action" value="remove">
+              <input type="hidden" name="index" value="{{ forloop.counter0 }}">
+              <button class="status-button" type="submit" aria-label="Remove {{ item.food.name }} suggestion">Remove suggestion</button>
+            </form>
+            {% endif %}
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="meal-plan-summary">
+      <div class="summary-meta">
+        <strong>Daily Plan Nutrition Totals</strong>
+        {% if targets.calories %}
+        <small class="target-compare-note">Daily requirement: {{ targets.calories }} kcal · {{ targets.protein_g }}g protein</small>
+        {% endif %}
+      </div>
+      <div class="summary-macros">
+        <span class="macro-total-pill calories-pill"><strong>{{ plan_totals.calories|floatformat:0 }}</strong> kcal</span>
+        <span class="macro-total-pill protein-pill"><strong>{{ plan_totals.protein_g|floatformat:1 }}</strong> g protein</span>
+        <span class="macro-total-pill carbs-pill"><strong>{{ plan_totals.carbs_g|floatformat:1 }}</strong> g carbs</span>
+        <span class="macro-total-pill fat-pill"><strong>{{ plan_totals.fat_g|floatformat:1 }}</strong> g fat</span>
+      </div>
+    </div>
+
+    <div class="meal-plan-actions">
+      {% if saved_plan.is_added_to_tracker %}
+      <a class="button" href="{% url 'nutrition_log' %}?date={{ saved_plan.date|date:'Y-m-d' }}">Plan is in your tracker · follow it →</a>
+      {% else %}
+      <form method="post">{% csrf_token %}<button class="button" name="action" value="save">Add suggestions to planned meals →</button></form>
+      {% endif %}
+      <form method="post">{% csrf_token %}<button class="button button-outline" name="action" value="generate">Generate a different plan</button></form>
+      <a class="text-link" href="{% url 'progress' %}#saved-plans">View saved plans →</a>
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <span class="empty-icon" aria-hidden="true">◒</span>
+      <p>{% if profile_complete %}Create a one-day menu from catalog foods that match your profile.{% else %}Complete your fitness profile to personalize a meal plan.{% endif %}</p>
+      {% if profile_complete %}
+      <form method="post">{% csrf_token %}<button class="button" name="action" value="generate">Generate my meal plan →</button></form>
+      {% else %}
+      <a href="{% url 'onboarding' %}">Complete fitness profile →</a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <p class="subtle-text meal-planner-disclaimer">Nutrition is calculated from local catalog values and serving data; these are estimates, not medical advice. Suggestions are saved as planned meals and do not count as consumed until marked. Google AI Studio/API free-tier access has usage limits, can change, and may use submitted content under Google's free-tier data terms. <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Check current Gemini pricing and terms ↗</a></p>
+</section>
+{% endblock %}
